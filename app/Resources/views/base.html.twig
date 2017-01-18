@@ -2,12 +2,24 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}Cultura en Red{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        
+        <link href="{{ asset('styles.css') }}" rel="stylesheet">
+
+        
+        
     </head>
-    <body>
+    <body id="{% block idbody %}{% endblock %}" class="preload">
+      
+        <div class="loader"></div>
+    
         {% block body %}{% endblock %}
+        
+        <script type="text/javascript" src="{{ asset('js/jquery-2.2.4.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('js/scripts.js') }}"></script>
+  
         {% block javascripts %}{% endblock %}
     </body>
 </html>
