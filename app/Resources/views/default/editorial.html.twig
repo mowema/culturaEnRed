@@ -4,7 +4,10 @@
 {% block body %}
 
 
-    <div class="logo"><a href="/home"><img src="imgs/logo.png"></a></div>
+    <div class="logo"><a href="/#inicio"><img src="imgs/logo.png"></a></div>
+
+    
+    <div class="logo"><a href="index.html#inicio"><img src="imgs/logo.png"></a></div>
 
     <div class="seccion"><img src="imgs/editorial/boton-editorial.png"></div>
 
@@ -15,19 +18,19 @@
 
           <div class="tema uno">
             <div class="titulo">INCUNABLES</div>
-            <div><div class="esfera"><img class="svg" src="imgs/editorial/incunables.svg"></div></div>
+            <div><div class="esfera"><img src="imgs/editorial/incunables.png"></div></div>
           </div>
           <div class="tema dos">
             <div class="titulo">NARRATIVA</div>
-            <div><div class="esfera"><img class="svg" src="imgs/editorial/narrativa.svg"></div></div>
+            <div><div class="esfera"><img src="imgs/editorial/narrativa.png"></div></div>
           </div>
           <div class="tema tres">
             <div class="titulo">POESÍA</div>
-            <div><div class="esfera"><img class="svg" src="imgs/editorial/poesia.svg"></div></div>
+            <div><div class="esfera"><img src="imgs/editorial/poesia.png"></div></div>
           </div>
           <div class="tema cuatro">
             <div class="titulo">CRÓNICAS DE VIAJE</div>
-            <div><div class="esfera"><img class="svg" src="imgs/editorial/viajes.svg"></div></div>
+            <div><div class="esfera"><img src="imgs/editorial/viajes.png"></div></div>
           </div>
 
           <div class="lineas-de-puntos"></div>
@@ -36,29 +39,20 @@
       </div>
 
         <div class="interna inactive">
-
-          <div class="sub-seccion">CRÓNICAS DE VIAJE</div>
-
-          <div class="volver-invisible"></div>
+          <div class="sub-seccion">CRÓNICAS DE VIAJE <img src="imgs/editorial/sub-viajes.png"></div>
 
           <div class="temas">
             <div class="tema barco">
-              <div class="desplegable close">
+              <div class="desplegable-recto close">
                 <div class="titulo">EN BARCO</div>
                 <ul>
                   <li>viaje 1</li>
                   <li>viaje 2</li>
                   <li>viaje 3</li>
-                  <li>el beagle</li>
+                  <li><a href="#" class="open-tema" data-open="el-beagle">el beagle</a></li>
                 </ul>
               </div>
               <div class="auto-delay"><img src="imgs/editorial/barco.png"></div>
-            </div>
-            <div class="tema bote">
-              <div class="auto-delay"><img src="imgs/editorial/bote.png"></div>
-            </div>
-            <div class="tema avion">
-              <div class="auto-delay"><img src="imgs/editorial/avion.png"></div>
             </div>
             <div class="tema delfin">
               <div class="auto-delay"><img src="imgs/editorial/delfin.png"></div>
@@ -66,12 +60,55 @@
             <div class="tema planta">
               <div class="auto-delay"><img src="imgs/editorial/planta.png"></div>
             </div>
+            <div class="tema avion">
+              <div class="auto-delay"><img src="imgs/editorial/avion.png"></div>
+            </div>
            </div>
+		   
+		   <!-- SUB-INTERNA -->
+		   <div id="el-beagle" class="sub-interna inactive">
+		   
+			<div class="temas">
+			  <div class="tema sub-uno">
+				<div class="punto auto-delay"><span>+</span></div>
+			  </div>
+			  <div class="tema sub-dos">
+				<!--div class="titulo">TEMATICA</div-->
+				<div class="punto auto-delay"><span>+</span></div>
+			  </div>
+			  <div class="tema sub-tres">
+				<!--div class="titulo">TEMATICA</div-->
+				<div class="punto auto-delay"><span>+</span></div>
+			  </div>
+			  <div class="tema sub-cuatro">
+				<!--div class="titulo">TEMATICA</div-->
+				<div class="punto auto-delay"><span>+</span></div>
+			  </div>
+			  <div class="tema sub-cinco">
+				<!--div class="titulo">TEMATICA</div-->
+				<div class="punto auto-delay"><span>+</span></div>
+			  </div>
+			  <div class="tema sub-seis">
+				<!--div class="titulo">TEMATICA</div-->
+				<div class="punto auto-delay"><span>+</span></div>
+			  </div>
+		   </div>
+		   
+		   <div class="tema-title auto-delay">EN BARCO</div>
+		   
+		   <div class="tema-libro auto-delay"><img src="imgs/editorial/en-barco/libro.png"><img class="ver-indice" src="imgs/editorial/en-barco/ver-indice.png"></div>
+		   
+		   <div class="bg-sub-tema"><img src="imgs/editorial/en-barco/el-barco.png"></div>
+		   <div class="anim-pajaro"><img src="imgs/editorial/en-barco/pajaro.png"></div>
+		   
          </div>
 
-    </div>
+		</div>
+		
 
-    <div class="ayuda">ELEGÍ LA TEMÁTICA DE TU INTERÉS</div>
+		<div class="ayuda">ELEGÍ LA TEMÁTICA DE TU INTERÉS</div>
+          </div>
+                
 {% endblock %}
 
 {% block stylesheets %}

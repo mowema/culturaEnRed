@@ -8,8 +8,8 @@ $(window).load(function() {
 
   /* HOME */
 
-  $(".the-logo, .particle").click( function( event ){
-
+  
+  var openMainSphere = function(){
     $(".the-sphere").toggleClass("close");
     $(".particles").toggleClass("close");
     $(".particle").toggleClass("close");
@@ -17,19 +17,28 @@ $(window).load(function() {
     $(".logo").toggleClass("close");
     $(".the-logo").toggleClass("close");
     $(".bg-edificios").toggleClass("close");
+  }
+  
+  if( window.location.hash == "#inicio"){
+	setTimeout(openMainSphere, 100);
+  }
+
+  $(".the-logo, .particle").click( function( event ){
+	openMainSphere();
   } )
 
 
 
   /* PUNTOS y DESPLEGABLES */
 
+  	/* DESPLEGABLE CON MENU INCLINADO */
+	
   $(".tema").click( function( event ){
     if( $(".tema").find(".desplegable").hasClass("open")  ){
       $(".tema").find(".desplegable").toggleClass("open close");
     }
     $(this).find(".desplegable").toggleClass("open close");
   })
-
 
   $(".desplegable ul").each(function(){
       var marginLeft = 0;
@@ -41,7 +50,27 @@ $(window).load(function() {
         d = d + 0.1;
     })
   })
+  
+    /* DESPLEGABLE CON MENU RECTO */
+	
+  $(".tema").click( function( event ){
+    if( $(".tema").find(".desplegable-recto").hasClass("open")  ){
+      $(".tema").find(".desplegable-recto").toggleClass("open close");
+    }
+    $(this).find(".desplegable-recto").toggleClass("open close");
+  })
+	
+    $(".desplegable-recto ul").each(function(){
+      var d = 0.1;
+      $(this).find("li").each(function(){
+        $(this).css("animation-delay", d+"s")
+        d = d + 0.1;
+    })
+  })
 
+  
+  /* DELAY EN ANIMACIONES */
+  
       var d = 0.2;
   $(".auto-delay").each(function(){
         $(this).css("animation-delay", d+"s")
@@ -50,59 +79,39 @@ $(window).load(function() {
 
 /* EDITORIAL */
 
-$("#editorial .temas .esfera").on("mouseover", function(e){
-  $("#editorial .temas .esfera").parent().css("transform", "scale(0.9)")
-  $(this).closest(".tema").find(".titulo").css("font-weight", "bold")
-  $(this).parent().css("transform", "scale(1.1)")
-})
 
-$("#editorial .temas .esfera").on("mouseleave", function(e){
-  $(this).closest(".tema").find(".titulo").css("font-weight", "300")
-  $("#editorial .temas .esfera").parent().css("transform", "scale(1)")
-})
-
-
-$("#editorial .temas .tema:nth-child(4) .esfera").on("click", function(e){
-  $(".principal").removeClass("active").addClass("inactive")
-  $(".interna").removeClass("inactive").addClass("active")
-  $(".seccion").addClass("small")
-  $(".ayuda").html("ELEGÍ LA CATEGORÍA DE TU INTERÉS");
-})
+	$("#editorial .temas .tema:nth-child(4) .esfera, #editorial .sub-seccion").on("click", function(e){
+	  $(".principal").removeClass("active").addClass("inactive")
+	  $(".interna").removeClass("inactive").addClass("active")
+	  $(".temas").removeClass("inactive")
+	  $(".sub-interna").removeClass("active").addClass("inactive")
+	  $(".seccion").addClass("small")
+	  $(".ayuda").html("ELEGÍ LA CATEGORÍA DE TU INTERÉS")
+	})
 
 
-$("#editorial .seccion, .volver-invisible").on("click", function(e){
-  $(".principal").removeClass("inactive").addClass("active")
-  $(".interna").removeClass("active").addClass("inactive")
-  $(".seccion").removeClass("small")
-  $(".ayuda").html("ELEGÍ LA TEMÁTICA DE TU INTERÉS");
-})
+	$("#editorial .seccion").on("click", function(e){
+	  $(".principal").removeClass("inactive").addClass("active")
+	  $(".interna").removeClass("active").addClass("inactive")
+	  $(".temas").removeClass("inactive")
+	  $(".sub-interna").removeClass("active").addClass("inactive")
+	  $(".seccion").removeClass("small")
+	  $(".ayuda").html("ELEGÍ LA TEMÁTICA DE TU INTERÉS")
+	})
 
-
-  /*  Replace all SVG images with inline SVG */
-
-  $('img.svg').each(function(){
-    	var $img = $(this);
-  	var imgID = $img.attr('id');
-  	var imgClass = $img.attr('class');
-  	var imgURL = $img.attr('src');
-
-  	$.get(imgURL, function(data) {
-
-  		var $svg = $(data).find('svg');
-
-  		if (typeof imgID !== 'undefined') {
-  			$svg = $svg.attr('id', imgID);
-  		}
-
-  		if (typeof imgClass !== 'undefined') {
-  			$svg = $svg.attr('class', imgClass+' replaced-svg');
-  		}
-
-  /*		 Remove any invalid XML tags as per http:validator.w3.org*/
-  		$svg = $svg.removeAttr('xmlns:a');
-  		$img.replaceWith($svg);
-  	});
-  });
+	$("#editorial .open-tema").on("click", function(e){
+	  e.preventDefault()
+	  var subsection = "#" + $(this).data("open")
+	  $(subsection).removeClass("inactive").addClass("active")
+	  
+	  $(".temas").addClass("inactive")
+	  $(".sub-interna .temas").removeClass("inactive").addClass("active")
+	  $(".ayuda").html("ELEGÍ EL CAPÍTULO DE TU INTERÉS")
+	})
+	
+	$("#editorial .tema-libro, .sub-interna .tema").on("click", function(e){
+	  $("#editorial .el-libro").removeClass("inactive").addClass("active")
+	})
 
 
 })
