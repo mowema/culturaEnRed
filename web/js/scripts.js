@@ -109,9 +109,5 @@ $(window).load(function() {
 	  $(".ayuda").html("ELEGÍ EL CAPÍTULO DE TU INTERÉS")
 	})
 	
-	$("#editorial .tema-libro, .sub-interna .tema").on("click", function(e){
-	  $("#editorial .el-libro").removeClass("inactive").addClass("active")
-	})
-
 
 })
