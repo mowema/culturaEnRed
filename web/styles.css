@@ -251,6 +251,11 @@ a{
   cursor: pointer;
 }
 
+.container {
+    margin: 0 auto;
+    max-width: 1210px;
+}
+
 .container-full {
     position: absolute;
     width: 100%;
