@@ -134,6 +134,15 @@ function closeBook() {
 /* ACCIONES */
 
 
+var closeMapa = function(){
+	$(".mapa-interactivo").removeClass("active").addClass("inactive");
+}
+
+var openMapa = function(){
+	$(".mapa-interactivo").removeClass("inactive").addClass("active");
+}
+
+
 $('body').on('click','.gotoPage',function(){
 	var thePage = $(this).data("page")
 	loadBook( thePage ) 
@@ -143,6 +152,10 @@ $('body').on('click','.gotoPage',function(){
 	
 $(".el-libro a.back").on("click", function(e){
   
+  if ( $(".mapa-interactivo.active") ) {
+	  closeMapa();
+  }
+  
   closeBook();
   
   setTimeout(function(){
@@ -150,3 +163,10 @@ $(".el-libro a.back").on("click", function(e){
   }, 500);
   
 })
+
+/* MAPA INTERACTIVO */
+
+$(".el-mapa .punto").click(function(e){
+	var openThis = "#" + $(this).data("open")
+	$(".el-mapa").find(openThis).toggleClass("close")
+});
