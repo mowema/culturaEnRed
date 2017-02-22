@@ -1,16 +1,23 @@
 /* LIBRO EL BEAGLE */
 
+
+.flipbook .libro-content .ayuda {
+    opacity: 1;
+    -webkit-animation: none;
+            animation: none;
+}
+
 .cabecera {
     position: absolute;
     top: 0;
-    padding: 20px 0;
+    padding: 14px 0;
     width: 100%;
-    text-align: center;
-	z-index: 99;
+    z-index: 99;
 }
 
+
 .flipbook .libro-content {
-    padding: 60px 60px;
+    padding: 30px 60px;
 }
 
 .flipbook .libro-content p a {
@@ -25,6 +32,9 @@
     background: #17B4FF;
 }
 
+.flipbook .libro-content .indice {
+    margin-top: 20px;
+}
 
 .flipbook .libro-content .indice img {
     width: 230px;
@@ -43,17 +53,21 @@
 }
 
 .flipbook .libro-content p {
-    font-size: 20px;
+    font-size: 19px;
 }
 
-.flipbook .libro-content>img {
+.flipbook .libro-content>img, .flipbook .libro-content a img {
     max-width: 100%;
 }
 
-.flipbook img.align-right {
+.flipbook .libro-content img.align-right, .flipbook .libro-content a img.align-right {
     float: left;
     width: 50%;
     padding: 30px 20px 10px 0px;
+}
+
+.flipbook .lista>div img {
+    transition: transform 0.2s ease;
 }
 
 .flipbook .lista>div {
@@ -63,6 +77,11 @@
     color: #E70081;
     font-weight: bold;
     font-size: 11px;
+	cursor: pointer;
+}
+
+.flipbook .lista>div:hover img {
+    transform: scale(1.1);
 }
 
 .flipbook .lista img {
@@ -362,4 +381,166 @@
 
 .animated-book.close{
     animation: zoomOut 1s both;
+}
+
+
+
+/* page nav */
+
+.page-nav {
+    position: absolute;
+    bottom: 30px;
+}
+
+
+.page-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.page-nav ul li {
+    float: left;
+    padding: 1px;
+    cursor: pointer;
+}
+
+.page-nav ul li img {
+    opacity: 0.5;
+    transform: scale(0.8);
+}
+
+.page-nav ul li.active img {
+    transform: scale(1);
+    opacity: 1;
+    padding: 0 5px;
+}
+
+.page-nav ul li.active.noscale img {
+    transform: scale(0.9);
+}
+
+.countPages span {
+    background: #B2B2B2;
+    padding: 5px;
+    font-size: 12px;
+    color: white;
+    border-radius: 10px;
+    position: relative;
+    top: 7px;
+    border: 4px solid white;
+}
+
+.countPages {
+    border-bottom: 1px solid #17B4FF;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+
+.el-libro .cabecera a.back {
+    background: silver;
+    color: white;
+    border-radius: 50%;
+    padding: 8px 11px;
+    font-size: 10px;
+}
+
+.el-libro .cabecera a.back:hover {
+    background: #8bdaff;
+}
+
+
+/* mapa */
+
+.mapa-interactivo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+
+.el-mapa {
+    position: absolute;
+    width: 1160px;
+    height: 770px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url(../content/editorial/el-beagle/mapa-interactivo.jpg);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.achicar-pantalla {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+	cursor: pointer;
+}
+
+.achicar-pantalla:hover {
+    transform: scale(0.96);
+}
+
+
+#editorial .el-libro .puntos {
+    margin: 0 auto;
+    max-width: 100%;
+    height: 640px;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+#editorial .el-libro .tema {
+    width: 25%;
+    float: left;
+    text-align: center;
+}
+
+#editorial .el-libro .sub-uno .punto {
+    background: #E81D62;
+    top: 468px;
+    left: 740px;
+}
+
+.el-mapa .mapa-info.close{
+	opacity: 0;
+	height: 0;
+}
+
+.el-mapa .mapa-info {
+    width: 163px;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 20px;
+    font-size: 14px;
+    border-radius: 7px;
+    left: 64px;
+    top: 410px;
+    overflow: hidden;
+    text-align: center;
+    z-index: 2;
+    height: 211px;
+    transition: all 0.5s ease;
+}
+
+.el-mapa .mapa-info .mas-info a {
+    color: #17b4ff;
+    font-weight: bold;
+}
+
+
+.mapa-interactivo.inactive {
+    display: none;
+}
+
+.mapa-interactivo.active {
+    opacity: 0;
+    animation: fadeInUp 0.2s ease;
+    animation-fill-mode: forwards;
 }
