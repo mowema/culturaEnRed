@@ -3,560 +3,568 @@
 {% block idbody %}editorial{% endblock %}
 {% block body %}
 
+  <div class="logo"><a href="/#inicio"><img src="imgs/logo.png"></a></div>
 
-    <div class="logo"><a href="/#inicio"><img src="imgs/logo.png"></a></div>
+  <div class="seccion"><img src="imgs/editorial/boton-editorial.png"></div>
 
-    <div class="seccion"><img src="imgs/editorial/boton-editorial.png"></div>
+  <div class="container-full bg-editorial">
 
-    <div class="container-full bg-editorial">
+    <div class="principal active">
+      <div class="temas">
 
-      <div class="principal active">
-        <div class="temas">
+        <div class="tema uno">
+          <div class="titulo">INCUNABLES</div>
+          <div><div class="esfera"><img src="imgs/editorial/incunables.png"></div></div>
+        </div>
+        <div class="tema dos">
+          <div class="titulo">NARRATIVA</div>
+          <div><div class="esfera"><img src="imgs/editorial/narrativa.png"></div></div>
+        </div>
+        <div class="tema tres">
+          <div class="titulo">POESÍA</div>
+          <div><div class="esfera"><img src="imgs/editorial/poesia.png"></div></div>
+        </div>
+        <div class="tema cuatro">
+          <div class="titulo">CRÓNICAS DE VIAJE</div>
+          <div><div class="esfera"><img src="imgs/editorial/viajes.png"></div></div>
+        </div>
 
-          <div class="tema uno">
-            <div class="titulo">INCUNABLES</div>
-            <div><div class="esfera"><img src="imgs/editorial/incunables.png"></div></div>
+        <div class="lineas-de-puntos"></div>
+
+      </div>
+    </div>
+
+    <div class="interna inactive">
+      <div class="sub-seccion">CRÓNICAS DE VIAJE <img src="imgs/editorial/sub-viajes.png"></div>
+
+      <div class="temas">
+        <div class="tema barco">
+          <div class="desplegable-recto close">
+            <div class="titulo">EN BARCO</div>
+            <ul>
+              <li>viaje 1</li>
+              <li>viaje 2</li>
+              <li>viaje 3</li>
+              <li><a href="#" class="open-tema" data-open="el-beagle">el beagle</a></li>
+            </ul>
           </div>
-          <div class="tema dos">
-            <div class="titulo">NARRATIVA</div>
-            <div><div class="esfera"><img src="imgs/editorial/narrativa.png"></div></div>
-          </div>
-          <div class="tema tres">
-            <div class="titulo">POESÍA</div>
-            <div><div class="esfera"><img src="imgs/editorial/poesia.png"></div></div>
-          </div>
-          <div class="tema cuatro">
-            <div class="titulo">CRÓNICAS DE VIAJE</div>
-            <div><div class="esfera"><img src="imgs/editorial/viajes.png"></div></div>
-          </div>
-
-          <div class="lineas-de-puntos"></div>
-
+          <div class="auto-delay"><img src="imgs/editorial/barco.png"></div>
+        </div>
+        <div class="tema delfin">
+          <div class="auto-delay"><img src="imgs/editorial/delfin.png"></div>
+        </div>
+        <div class="tema planta">
+          <div class="auto-delay"><img src="imgs/editorial/planta.png"></div>
+        </div>
+        <div class="tema avion">
+          <div class="auto-delay"><img src="imgs/editorial/avion.png"></div>
         </div>
       </div>
 
-        <div class="interna inactive">
-          <div class="sub-seccion">CRÓNICAS DE VIAJE <img src="imgs/editorial/sub-viajes.png"></div>
+      <!-- SUB-INTERNA -->
+      <div id="el-beagle" class="sub-interna inactive">
 
-          <div class="temas">
-            <div class="tema barco">
-              <div class="desplegable-recto close">
-                <div class="titulo">EN BARCO</div>
-                <ul>
-                  <li>viaje 1</li>
-                  <li>viaje 2</li>
-                  <li>viaje 3</li>
-                  <li><a href="#" class="open-tema" data-open="el-beagle">el beagle</a></li>
-                </ul>
+        <div class="temas">
+          <div class="tema sub-uno gotoPage" data-page="4" >
+            <div class="punto auto-delay"><span>+</span></div>
+          </div>
+          <div class="tema sub-dos gotoPage" data-page="10" >
+
+            <div class="punto auto-delay"><span>+</span></div>
+          </div>
+          <div class="tema sub-tres gotoPage" data-page="12" >
+
+            <div class="punto auto-delay"><span>+</span></div>
+          </div>
+          <div class="tema sub-cuatro gotoPage" data-page="14" >
+
+            <div class="punto auto-delay"><span>+</span></div>
+          </div>
+          <div class="tema sub-cinco gotoPage" data-page="16" >
+
+            <div class="punto auto-delay"><span>+</span></div>
+          </div>
+          <div class="tema sub-seis gotoPage" data-page="4" >
+
+            <div class="punto auto-delay"><span>+</span></div>
+          </div>
+        </div>
+
+        <div class="tema-title auto-delay">EN BARCO</div>
+
+        <div class="tema-libro gotoPage auto-delay"><img src="imgs/editorial/en-barco/libro.png"><img class="ver-indice" src="imgs/editorial/en-barco/ver-indice.png"></div>
+
+        <div class="bg-sub-tema en-barco"></div>
+        <div class="anim-pajaro"><img src="imgs/editorial/en-barco/pajaro.png"></div>
+
+      </div>
+
+    </div>
+
+    <div class="el-libro inactive">
+
+
+      <div class="cabecera">
+        <div class="container" style="text-align: right">
+          <a href="#" class="back">X</a>
+        </div>
+      </div>
+
+      <div class="flipbook-viewport">
+        <div class="container">
+          <div id="el-beagle" class="flipbook libro">
+            <div depth="5" class="hard"><div class="side"></div><img src="content/editorial/el-beagle/tapa.jpg"></div>
+            <div depth="5" class="hard front-side"><div class="depth"></div><img src="content/editorial/el-beagle/back.jpg"></div>
+            <div class="own-size"></div>
+            <div class="own-size"><div class="libro-content">
+                <div class="indice">
+
+                  <img src="content/editorial/el-beagle/pic-indice-1.png">
+                  <img src="content/editorial/el-beagle/pic-titulo.png">
+
+                  <div class="menu indice">
+                    <ul>
+                      <li class="gotoPage" data-page="4" ><span class="numero">01</span> PERSONAJES</li>
+                      <li class="gotoPage" data-page="10" ><span class="numero">02</span> INFOGRAFÍAS</li>
+                      <li class="gotoPage" data-page="12" ><span class="numero">03</span> MAPAS</li>
+                      <li class="gotoPage" data-page="14" ><span class="numero">04</span> IMÁGENES</li>
+                      <li class="gotoPage" data-page="16" ><span class="numero">05</span> VIDEOS</li>
+                    </ul>
+                  </div>
+
+                  <div class="ayuda">ELEGÍ EL CAPÍTULO DE TU INTERÉS</div>
+
+                </div>
               </div>
-              <div class="auto-delay"><img src="imgs/editorial/barco.png"></div>
+            </div><div class="own-size"><div class="libro-content">
+
+                <h1 class="libro-titulo"><span class="numero">01</span> PERSONAJES</h1>
+                <div id="dataPage01"></div>
+                <div class="page-nav">
+                  <div class="countPages"><span>2 de 14</span></div>
+                  <ul>
+                    <li class="gotoPage active noscale" data-page="4"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage active" data-page="5"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="6"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="7"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="8"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="9"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="10"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="11"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="12"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="13"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="14"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="15"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="16"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="17"><img src="imgs/libro/page-nav.png"></li>
+                  </ul>
+                </div>
+
+              </div>
+
+            </div><div class="own-size"><div class="libro-content">
+
+                <div id="dataPage02"></div>
+                
+                <img src="content/editorial/el-beagle/pic-01.png" />
+
+                <div class="page-nav">
+                  <div class="countPages"><span>3 de 14</span></div>
+                  <ul>
+                    <li class="gotoPage" data-page="4"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="5"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage active" data-page="6"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage active noscale" data-page="7"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="8"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="9"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="10"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="11"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="12"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="13"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="14"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="15"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="16"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="17"><img src="imgs/libro/page-nav.png"></li>
+                  </ul>
+                </div>
+
+              </div>
+            </div><div class="own-size"><div class="libro-content">
+
+                <img class="align-right" src="content/editorial/el-beagle/pic-video.png" />
+
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+                </p>
+
+                <div class="page-nav">
+                  <div class="countPages"><span>4 de 14</span></div>
+                  <ul>
+                    <li class="gotoPage" data-page="4"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="5"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage active noscale" data-page="6"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage active" data-page="7"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="8"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="9"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="10"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="11"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="12"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="13"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="14"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="15"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="16"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="17"><img src="imgs/libro/page-nav.png"></li>
+                  </ul>
+                </div>
+
+
+              </div>
+
+            </div><div class="own-size"><div class="libro-content">
+
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue.
+                </p>
+
+                <img class="align-right" src="content/editorial/el-beagle/pic-infografia.png" />
+
+                <p>Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus hendrerit id, lorem.</p>
+
+
+                <div class="page-nav">
+                  <div class="countPages"><span>5 de 14</span></div>
+                  <ul>
+                    <li class="gotoPage" data-page="4"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="5"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="6"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="7"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage active" data-page="8"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage active noscale" data-page="9"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="10"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="11"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="12"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="13"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="14"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="15"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="16"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="17"><img src="imgs/libro/page-nav.png"></li>
+                  </ul>
+                </div>
+
+              </div>
+
+            </div><div class="own-size"><div class="libro-content">
+
+                <a href="#" onclick="openMapa();
+                                                    return false;"><img src="content/editorial/el-beagle/pic-mapa.png" /></a>
+
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue.
+                </p>
+
+                <div class="page-nav">
+                  <div class="countPages"><span>6 de 14</span></div>
+                  <ul>
+                    <li class="gotoPage" data-page="4"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="5"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="6"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="7"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage active noscale" data-page="8"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage active" data-page="9"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="10"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="11"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="12"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="13"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="14"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="15"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="16"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="17"><img src="imgs/libro/page-nav.png"></li>
+                  </ul>
+                </div>
+
+
+              </div>
+            </div><div class="own-size"><div class="libro-content">
+
+                <div class="indice">
+
+                  <img src="content/editorial/el-beagle/pic-indice-2.png">
+                  <img src="content/editorial/el-beagle/pic-titulo.png">
+
+                  <div class="menu indice">
+                    <ul>
+                      <li class="gotoPage" data-page="4" ><span class="numero">01</span> PERSONAJES</li>
+                      <li class="gotoPage" data-page="10" ><span class="numero">02</span> INFOGRAFÍAS</li>
+                      <li class="gotoPage" data-page="12" ><span class="numero">03</span> MAPAS</li>
+                      <li class="gotoPage" data-page="14" ><span class="numero">04</span> IMÁGENES</li>
+                      <li class="gotoPage" data-page="16" ><span class="numero">05</span> VIDEOS</li>
+                    </ul>
+                  </div>
+
+                  <div class="ayuda">ELEGÍ EL CAPÍTULO DE TU INTERÉS</div>
+
+                </div>
+
+              </div>
+            </div><div class="own-size"><div class="libro-content">
+                <h1 class="libro-titulo"><span class="numero">02</span> INFOGRAFÍAS</h1>
+                <div class="lista">
+                  <div><img src="content/editorial/el-beagle/lista-infografia.png">INFOGRAFÍA</div>
+                  <div><img src="content/editorial/el-beagle/lista-infografia.png">INFOGRAFÍA</div>
+                  <div><img src="content/editorial/el-beagle/lista-infografia.png">INFOGRAFÍA</div>
+                  <div><img src="content/editorial/el-beagle/lista-infografia.png">INFOGRAFÍA</div>
+                  <div><img src="content/editorial/el-beagle/lista-infografia.png">INFOGRAFÍA</div>
+                  <div><img src="content/editorial/el-beagle/lista-infografia.png">INFOGRAFÍA</div>
+                  <div><img src="content/editorial/el-beagle/lista-infografia.png">INFOGRAFÍA</div>
+                  <div><img src="content/editorial/el-beagle/lista-infografia.png">INFOGRAFÍA</div>
+                  <div><img src="content/editorial/el-beagle/lista-infografia.png">INFOGRAFÍA</div>
+                </div>
+
+                <div class="page-nav">
+                  <div class="countPages"><span>8 de 14</span></div>
+                  <ul>
+                    <li class="gotoPage" data-page="4"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="5"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="6"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="7"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="8"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="9"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage active noscale" data-page="10"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage active" data-page="11"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="12"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="13"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="14"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="15"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="16"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="17"><img src="imgs/libro/page-nav.png"></li>
+                  </ul>
+                </div>
+
+              </div>
+            </div><div class="own-size"><div class="libro-content">
+
+                <div class="indice">
+
+                  <img src="content/editorial/el-beagle/pic-indice-3.png">
+                  <img src="content/editorial/el-beagle/pic-titulo.png">
+
+                  <div class="menu indice">
+                    <ul>
+                      <li class="gotoPage" data-page="4" ><span class="numero">01</span> PERSONAJES</li>
+                      <li class="gotoPage" data-page="10" ><span class="numero">02</span> INFOGRAFÍAS</li>
+                      <li class="gotoPage" data-page="12" ><span class="numero">03</span> MAPAS</li>
+                      <li class="gotoPage" data-page="14" ><span class="numero">04</span> IMÁGENES</li>
+                      <li class="gotoPage" data-page="16" ><span class="numero">05</span> VIDEOS</li>
+                    </ul>
+                  </div>
+
+                  <div class="ayuda">ELEGÍ EL CAPÍTULO DE TU INTERÉS</div>
+
+                </div>
+
+              </div>
+            </div><div class="own-size"><div class="libro-content">
+                <h1 class="libro-titulo"><span class="numero">03</span> MAPAS INTERACTIVOS</h1>
+                <div class="lista">
+                  <div onclick="openMapa();
+                                                                    return false;"><img src="content/editorial/el-beagle/lista-mapa.png">MAPA</div>
+                  <div onclick="openMapa();
+                                                                    return false;"><img src="content/editorial/el-beagle/lista-mapa.png">MAPA</div>
+                  <div onclick="openMapa();
+                                                                    return false;"><img src="content/editorial/el-beagle/lista-mapa.png">MAPA</div>
+                  <div onclick="openMapa();
+                                                                    return false;"><img src="content/editorial/el-beagle/lista-mapa.png">MAPA</div>
+                  <div onclick="openMapa();
+                                                                    return false;"><img src="content/editorial/el-beagle/lista-mapa.png">MAPA</div>
+                  <div onclick="openMapa();
+                                                                    return false;"><img src="content/editorial/el-beagle/lista-mapa.png">MAPA</div>
+                  <div onclick="openMapa();
+                                                                    return false;"><img src="content/editorial/el-beagle/lista-mapa.png">MAPA</div>
+                  <div onclick="openMapa();
+                                                                    return false;"><img src="content/editorial/el-beagle/lista-mapa.png">MAPA</div>
+                  <div onclick="openMapa();
+                                                                    return false;"><img src="content/editorial/el-beagle/lista-mapa.png">MAPA</div>
+                </div>
+
+                <div class="page-nav">
+                  <div class="countPages"><span>10 de 14</span></div>
+                  <ul>
+                    <li class="gotoPage" data-page="4"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="5"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="6"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="7"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="8"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="9"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="10"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="11"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage active noscale" data-page="12"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage active" data-page="13"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="14"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="15"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="16"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="17"><img src="imgs/libro/page-nav.png"></li>
+                  </ul>
+                </div>
+
+              </div>
+            </div><div class="own-size"><div class="libro-content">
+
+                <div class="indice">
+
+                  <img src="content/editorial/el-beagle/pic-indice-4.png">
+                  <img src="content/editorial/el-beagle/pic-titulo.png">
+
+                  <div class="menu indice">
+                    <ul>
+                      <li class="gotoPage" data-page="4" ><span class="numero">01</span> PERSONAJES</li>
+                      <li class="gotoPage" data-page="10" ><span class="numero">02</span> INFOGRAFÍAS</li>
+                      <li class="gotoPage" data-page="12" ><span class="numero">03</span> MAPAS</li>
+                      <li class="gotoPage" data-page="14" ><span class="numero">04</span> IMÁGENES</li>
+                      <li class="gotoPage" data-page="16" ><span class="numero">05</span> VIDEOS</li>
+                    </ul>
+                  </div>
+
+                  <div class="ayuda">ELEGÍ EL CAPÍTULO DE TU INTERÉS</div>
+
+                </div>
+
+              </div>
+            </div><div class="own-size"><div class="libro-content">
+                <h1 class="libro-titulo"><span class="numero">04</span> IMÁGENES</h1>
+                <div class="lista">
+                  <div><img src="content/editorial/el-beagle/lista-imagen.png">IMAGEN</div>
+                  <div><img src="content/editorial/el-beagle/lista-imagen.png">IMAGEN</div>
+                  <div><img src="content/editorial/el-beagle/lista-imagen.png">IMAGEN</div>
+                  <div><img src="content/editorial/el-beagle/lista-imagen.png">IMAGEN</div>
+                  <div><img src="content/editorial/el-beagle/lista-imagen.png">IMAGEN</div>
+                  <div><img src="content/editorial/el-beagle/lista-imagen.png">IMAGEN</div>
+                  <div><img src="content/editorial/el-beagle/lista-imagen.png">IMAGEN</div>
+                  <div><img src="content/editorial/el-beagle/lista-imagen.png">IMAGEN</div>
+                  <div><img src="content/editorial/el-beagle/lista-imagen.png">IMAGEN</div>
+                </div>
+
+                <div class="page-nav">
+                  <div class="countPages"><span>12 de 14</span></div>
+                  <ul>
+                    <li class="gotoPage" data-page="4"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="5"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="6"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="7"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="8"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="9"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="10"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="11"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="12"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="13"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage active  noscale" data-page="14"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage active" data-page="15"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="16"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="17"><img src="imgs/libro/page-nav.png"></li>
+                  </ul>
+                </div>
+
+              </div>
+            </div><div class="own-size"><div class="libro-content">
+
+                <div class="indice">
+
+                  <img src="content/editorial/el-beagle/pic-indice-5.png">
+                  <img src="content/editorial/el-beagle/pic-titulo.png">
+
+                  <div class="menu indice">
+                    <ul>
+                      <li class="gotoPage" data-page="4" ><span class="numero">01</span> PERSONAJES</li>
+                      <li class="gotoPage" data-page="10" ><span class="numero">02</span> INFOGRAFÍAS</li>
+                      <li class="gotoPage" data-page="12" ><span class="numero">03</span> MAPAS</li>
+                      <li class="gotoPage" data-page="14" ><span class="numero">04</span> IMÁGENES</li>
+                      <li class="gotoPage" data-page="16" ><span class="numero">05</span> VIDEOS</li>
+                    </ul>
+                  </div>
+
+                  <div class="ayuda">ELEGÍ EL CAPÍTULO DE TU INTERÉS</div>
+
+                </div>
+
+              </div>
+            </div><div class="own-size"><div class="libro-content">
+                <h1 class="libro-titulo"><span class="numero">05</span> VIDEOS MULTIMEDIA</h1>
+                <div class="lista">
+                  <div><img src="content/editorial/el-beagle/lista-video.png">VIDEO</div>
+                  <div><img src="content/editorial/el-beagle/lista-video.png">VIDEO</div>
+                  <div><img src="content/editorial/el-beagle/lista-video.png">VIDEO</div>
+                  <div><img src="content/editorial/el-beagle/lista-video.png">VIDEO</div>
+                  <div><img src="content/editorial/el-beagle/lista-video.png">VIDEO</div>
+                  <div><img src="content/editorial/el-beagle/lista-video.png">VIDEO</div>
+                  <div><img src="content/editorial/el-beagle/lista-video.png">VIDEO</div>
+                  <div><img src="content/editorial/el-beagle/lista-video.png">VIDEO</div>
+                  <div><img src="content/editorial/el-beagle/lista-video.png">VIDEO</div>
+                </div>
+
+                <div class="page-nav">
+                  <div class="countPages"><span>14 de 14</span></div>
+                  <ul>
+                    <li class="gotoPage" data-page="4"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="5"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="6"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="7"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="8"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="9"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="10"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="11"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="12"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="13"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="14"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage" data-page="15"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage active noscale" data-page="16"><img src="imgs/libro/page-nav.png"></li>
+                    <li class="gotoPage active" data-page="17"><img src="imgs/libro/page-nav.png"></li>
+                  </ul>
+                </div>
+
+              </div>
+            </div><div class="own-size"></div>
+            <div class="hard fixed back-side last-but-one"><div class="depth"></div><img src="content/editorial/el-beagle/back.jpg"></div>
+            <div class="hard back-side"><img src="content/editorial/el-beagle/back.jpg"></div>
+
+
+          </div>
+        </div>
+      </div>
+
+
+      <div class="mapa-interactivo inactive">
+
+        <div class="el-mapa">
+
+          <div class="mapa-info close" id="estrecho-de-magallanes">
+
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+
+            <div class="mas-info"><a href="#">+ INFO</a></div>
+
+          </div>
+
+          <div class="puntos">
+            <div class="tema sub-uno">
+              <div class="punto auto-delay" data-open="estrecho-de-magallanes"><span>+</span></div>
             </div>
-            <div class="tema delfin">
-              <div class="auto-delay"><img src="imgs/editorial/delfin.png"></div>
-            </div>
-            <div class="tema planta">
-              <div class="auto-delay"><img src="imgs/editorial/planta.png"></div>
-            </div>
-            <div class="tema avion">
-              <div class="auto-delay"><img src="imgs/editorial/avion.png"></div>
-            </div>
-           </div>
-		   
-		   <!-- SUB-INTERNA -->
-		   <div id="el-beagle" class="sub-interna inactive">
-		   
-			<div class="temas">
-			  <div class="tema sub-uno gotoPage" data-page="4" >
-				<div class="punto auto-delay"><span>+</span></div>
-			  </div>
-			  <div class="tema sub-dos gotoPage" data-page="10" >
+          </div>
 
-				<div class="punto auto-delay"><span>+</span></div>
-			  </div>
-			  <div class="tema sub-tres gotoPage" data-page="12" >
 
-				<div class="punto auto-delay"><span>+</span></div>
-			  </div>
-			  <div class="tema sub-cuatro gotoPage" data-page="14" >
+          <div class="achicar-pantalla"><a href="#" onclick="closeMapa();
+                                    return false;"><img src="imgs/libro/achicar-pantalla.png"></a></div>
 
-				<div class="punto auto-delay"><span>+</span></div>
-			  </div>
-			  <div class="tema sub-cinco gotoPage" data-page="16" >
+        </div>
 
-				<div class="punto auto-delay"><span>+</span></div>
-			  </div>
-			  <div class="tema sub-seis gotoPage" data-page="4" >
+      </div>
 
-				<div class="punto auto-delay"><span>+</span></div>
-			  </div>
-		   </div>
-		   
-		   <div class="tema-title auto-delay">EN BARCO</div>
-		   
-		   <div class="tema-libro gotoPage auto-delay"><img src="imgs/editorial/en-barco/libro.png"><img class="ver-indice" src="imgs/editorial/en-barco/ver-indice.png"></div>
-		   
-		   <div class="bg-sub-tema en-barco"></div>
-		   <div class="anim-pajaro"><img src="imgs/editorial/en-barco/pajaro.png"></div>
-		   
-         </div>
 
-		</div>
-		
-		<div class="el-libro inactive">
-		
-		
-			<div class="cabecera">
-				<div class="container" style="text-align: right">
-					<a href="#" class="back">X</a>
-				</div>
-			</div>
-		
-			<div class="flipbook-viewport">
-				<div class="container">
-					<div id="el-beagle" class="flipbook libro">
-						<div depth="5" class="hard"><div class="side"></div><img src="content/editorial/el-beagle/tapa.jpg"></div>
-						<div depth="5" class="hard front-side"><div class="depth"></div><img src="content/editorial/el-beagle/back.jpg"></div>
-						<div class="own-size"></div>
-						<div class="own-size"><div class="libro-content">
-							<div class="indice">
-							
-								<img src="content/editorial/el-beagle/pic-indice-1.png">
-								<img src="content/editorial/el-beagle/pic-titulo.png">
-								
-								  <div class="menu indice">
-									<ul>
-									  <li class="gotoPage" data-page="4" ><span class="numero">01</span> PERSONAJES</li>
-									  <li class="gotoPage" data-page="10" ><span class="numero">02</span> INFOGRAFÍAS</li>
-									  <li class="gotoPage" data-page="12" ><span class="numero">03</span> MAPAS</li>
-									  <li class="gotoPage" data-page="14" ><span class="numero">04</span> IMÁGENES</li>
-									  <li class="gotoPage" data-page="16" ><span class="numero">05</span> VIDEOS</li>
-									</ul>
-								  </div>
-			  
-								<div class="ayuda">ELEGÍ EL CAPÍTULO DE TU INTERÉS</div>
-							
-							</div>
-						</div>
-						</div><div class="own-size"><div class="libro-content">
-						
-						<h1 class="libro-titulo"><span class="numero">01</span> PERSONAJES</h1>
-						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. <a href="#">Nulla</a> consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra <a href="#">Nulla</a> ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae .sapien ut libero venenatis</p>
-						
-						<div class="page-nav">
-							<div class="countPages"><span>2 de 14</span></div>
-								<ul>
-									<li class="gotoPage active noscale" data-page="4"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage active" data-page="5"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="6"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="7"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="8"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="9"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="10"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="11"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="12"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="13"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="14"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="15"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="16"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="17"><img src="imgs/libro/page-nav.png"></li>
-								</ul>
-							</div>
-							
-						</div>
+    </div>
 
-						</div><div class="own-size"><div class="libro-content">
-						
-						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. <a href="#">Nulla</a> consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra <a href="#">Nulla</a> ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue.
-						</p>
-						
-						<img src="content/editorial/el-beagle/pic-01.png" />
-						
-						<div class="page-nav">
-							<div class="countPages"><span>3 de 14</span></div>
-								<ul>
-									<li class="gotoPage" data-page="4"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="5"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage active" data-page="6"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage active noscale" data-page="7"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="8"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="9"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="10"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="11"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="12"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="13"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="14"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="15"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="16"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="17"><img src="imgs/libro/page-nav.png"></li>
-								</ul>
-							</div>
-						
-						</div>
-						</div><div class="own-size"><div class="libro-content">
-						
-						<img class="align-right" src="content/editorial/el-beagle/pic-video.png" />
-						
-						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
-						</p>
-						
-						<div class="page-nav">
-							<div class="countPages"><span>4 de 14</span></div>
-								<ul>
-									<li class="gotoPage" data-page="4"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="5"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage active noscale" data-page="6"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage active" data-page="7"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="8"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="9"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="10"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="11"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="12"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="13"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="14"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="15"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="16"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="17"><img src="imgs/libro/page-nav.png"></li>
-								</ul>
-							</div>
-						
-						
-						</div>
-						
-						</div><div class="own-size"><div class="libro-content">
-						
-						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue.
-						</p>
-						
-						<img class="align-right" src="content/editorial/el-beagle/pic-infografia.png" />
-						
-						<p>Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus hendrerit id, lorem.</p>
-						
-						
-						<div class="page-nav">
-							<div class="countPages"><span>5 de 14</span></div>
-								<ul>
-									<li class="gotoPage" data-page="4"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="5"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="6"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="7"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage active" data-page="8"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage active noscale" data-page="9"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="10"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="11"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="12"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="13"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="14"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="15"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="16"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="17"><img src="imgs/libro/page-nav.png"></li>
-								</ul>
-							</div>
-						
-						</div>
-						
-						</div><div class="own-size"><div class="libro-content">
-						
-						<a href="#" onclick="openMapa(); return false;"><img src="content/editorial/el-beagle/pic-mapa.png" /></a>
-						
-						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue.
-						</p>
-						
-						<div class="page-nav">
-							<div class="countPages"><span>6 de 14</span></div>
-								<ul>
-									<li class="gotoPage" data-page="4"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="5"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="6"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="7"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage active noscale" data-page="8"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage active" data-page="9"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="10"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="11"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="12"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="13"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="14"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="15"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="16"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="17"><img src="imgs/libro/page-nav.png"></li>
-								</ul>
-							</div>
-						
-						
-						</div>
-						</div><div class="own-size"><div class="libro-content">
-						
-							<div class="indice">
-							
-								<img src="content/editorial/el-beagle/pic-indice-2.png">
-								<img src="content/editorial/el-beagle/pic-titulo.png">
-								
-								  <div class="menu indice">
-									<ul>
-									  <li class="gotoPage" data-page="4" ><span class="numero">01</span> PERSONAJES</li>
-									  <li class="gotoPage" data-page="10" ><span class="numero">02</span> INFOGRAFÍAS</li>
-									  <li class="gotoPage" data-page="12" ><span class="numero">03</span> MAPAS</li>
-									  <li class="gotoPage" data-page="14" ><span class="numero">04</span> IMÁGENES</li>
-									  <li class="gotoPage" data-page="16" ><span class="numero">05</span> VIDEOS</li>
-									</ul>
-								  </div>
-			  
-								<div class="ayuda">ELEGÍ EL CAPÍTULO DE TU INTERÉS</div>
-							
-							</div>
-						
-						</div>
-						</div><div class="own-size"><div class="libro-content">
-							<h1 class="libro-titulo"><span class="numero">02</span> INFOGRAFÍAS</h1>
-							<div class="lista">
-								<div><img src="content/editorial/el-beagle/lista-infografia.png">INFOGRAFÍA</div>
-								<div><img src="content/editorial/el-beagle/lista-infografia.png">INFOGRAFÍA</div>
-								<div><img src="content/editorial/el-beagle/lista-infografia.png">INFOGRAFÍA</div>
-								<div><img src="content/editorial/el-beagle/lista-infografia.png">INFOGRAFÍA</div>
-								<div><img src="content/editorial/el-beagle/lista-infografia.png">INFOGRAFÍA</div>
-								<div><img src="content/editorial/el-beagle/lista-infografia.png">INFOGRAFÍA</div>
-								<div><img src="content/editorial/el-beagle/lista-infografia.png">INFOGRAFÍA</div>
-								<div><img src="content/editorial/el-beagle/lista-infografia.png">INFOGRAFÍA</div>
-								<div><img src="content/editorial/el-beagle/lista-infografia.png">INFOGRAFÍA</div>
-							</div>
-							
-						<div class="page-nav">
-							<div class="countPages"><span>8 de 14</span></div>
-								<ul>
-									<li class="gotoPage" data-page="4"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="5"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="6"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="7"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="8"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="9"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage active noscale" data-page="10"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage active" data-page="11"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="12"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="13"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="14"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="15"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="16"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="17"><img src="imgs/libro/page-nav.png"></li>
-								</ul>
-							</div>
-							
-						</div>
-						</div><div class="own-size"><div class="libro-content">
-						
-							<div class="indice">
-							
-								<img src="content/editorial/el-beagle/pic-indice-3.png">
-								<img src="content/editorial/el-beagle/pic-titulo.png">
-								
-								  <div class="menu indice">
-									<ul>
-									  <li class="gotoPage" data-page="4" ><span class="numero">01</span> PERSONAJES</li>
-									  <li class="gotoPage" data-page="10" ><span class="numero">02</span> INFOGRAFÍAS</li>
-									  <li class="gotoPage" data-page="12" ><span class="numero">03</span> MAPAS</li>
-									  <li class="gotoPage" data-page="14" ><span class="numero">04</span> IMÁGENES</li>
-									  <li class="gotoPage" data-page="16" ><span class="numero">05</span> VIDEOS</li>
-									</ul>
-								  </div>
-			  
-								<div class="ayuda">ELEGÍ EL CAPÍTULO DE TU INTERÉS</div>
-							
-							</div>
-						
-						</div>
-						</div><div class="own-size"><div class="libro-content">
-							<h1 class="libro-titulo"><span class="numero">03</span> MAPAS INTERACTIVOS</h1>
-							<div class="lista">
-								<div onclick="openMapa(); return false;"><img src="content/editorial/el-beagle/lista-mapa.png">MAPA</div>
-								<div onclick="openMapa(); return false;"><img src="content/editorial/el-beagle/lista-mapa.png">MAPA</div>
-								<div onclick="openMapa(); return false;"><img src="content/editorial/el-beagle/lista-mapa.png">MAPA</div>
-								<div onclick="openMapa(); return false;"><img src="content/editorial/el-beagle/lista-mapa.png">MAPA</div>
-								<div onclick="openMapa(); return false;"><img src="content/editorial/el-beagle/lista-mapa.png">MAPA</div>
-								<div onclick="openMapa(); return false;"><img src="content/editorial/el-beagle/lista-mapa.png">MAPA</div>
-								<div onclick="openMapa(); return false;"><img src="content/editorial/el-beagle/lista-mapa.png">MAPA</div>
-								<div onclick="openMapa(); return false;"><img src="content/editorial/el-beagle/lista-mapa.png">MAPA</div>
-								<div onclick="openMapa(); return false;"><img src="content/editorial/el-beagle/lista-mapa.png">MAPA</div>
-							</div>
-							
-						<div class="page-nav">
-							<div class="countPages"><span>10 de 14</span></div>
-								<ul>
-									<li class="gotoPage" data-page="4"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="5"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="6"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="7"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="8"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="9"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="10"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="11"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage active noscale" data-page="12"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage active" data-page="13"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="14"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="15"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="16"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="17"><img src="imgs/libro/page-nav.png"></li>
-								</ul>
-							</div>
-							
-						</div>
-						</div><div class="own-size"><div class="libro-content">
-						
-							<div class="indice">
-							
-								<img src="content/editorial/el-beagle/pic-indice-4.png">
-								<img src="content/editorial/el-beagle/pic-titulo.png">
-								
-								  <div class="menu indice">
-									<ul>
-									  <li class="gotoPage" data-page="4" ><span class="numero">01</span> PERSONAJES</li>
-									  <li class="gotoPage" data-page="10" ><span class="numero">02</span> INFOGRAFÍAS</li>
-									  <li class="gotoPage" data-page="12" ><span class="numero">03</span> MAPAS</li>
-									  <li class="gotoPage" data-page="14" ><span class="numero">04</span> IMÁGENES</li>
-									  <li class="gotoPage" data-page="16" ><span class="numero">05</span> VIDEOS</li>
-									</ul>
-								  </div>
-			  
-								<div class="ayuda">ELEGÍ EL CAPÍTULO DE TU INTERÉS</div>
-							
-							</div>
-						
-						</div>
-						</div><div class="own-size"><div class="libro-content">
-							<h1 class="libro-titulo"><span class="numero">04</span> IMÁGENES</h1>
-							<div class="lista">
-								<div><img src="content/editorial/el-beagle/lista-imagen.png">IMAGEN</div>
-								<div><img src="content/editorial/el-beagle/lista-imagen.png">IMAGEN</div>
-								<div><img src="content/editorial/el-beagle/lista-imagen.png">IMAGEN</div>
-								<div><img src="content/editorial/el-beagle/lista-imagen.png">IMAGEN</div>
-								<div><img src="content/editorial/el-beagle/lista-imagen.png">IMAGEN</div>
-								<div><img src="content/editorial/el-beagle/lista-imagen.png">IMAGEN</div>
-								<div><img src="content/editorial/el-beagle/lista-imagen.png">IMAGEN</div>
-								<div><img src="content/editorial/el-beagle/lista-imagen.png">IMAGEN</div>
-								<div><img src="content/editorial/el-beagle/lista-imagen.png">IMAGEN</div>
-							</div>
-							
-						<div class="page-nav">
-							<div class="countPages"><span>12 de 14</span></div>
-								<ul>
-									<li class="gotoPage" data-page="4"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="5"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="6"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="7"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="8"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="9"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="10"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="11"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="12"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="13"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage active  noscale" data-page="14"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage active" data-page="15"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="16"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="17"><img src="imgs/libro/page-nav.png"></li>
-								</ul>
-							</div>
-							
-						</div>
-						</div><div class="own-size"><div class="libro-content">
-						
-							<div class="indice">
-							
-								<img src="content/editorial/el-beagle/pic-indice-5.png">
-								<img src="content/editorial/el-beagle/pic-titulo.png">
-								
-								  <div class="menu indice">
-									<ul>
-									  <li class="gotoPage" data-page="4" ><span class="numero">01</span> PERSONAJES</li>
-									  <li class="gotoPage" data-page="10" ><span class="numero">02</span> INFOGRAFÍAS</li>
-									  <li class="gotoPage" data-page="12" ><span class="numero">03</span> MAPAS</li>
-									  <li class="gotoPage" data-page="14" ><span class="numero">04</span> IMÁGENES</li>
-									  <li class="gotoPage" data-page="16" ><span class="numero">05</span> VIDEOS</li>
-									</ul>
-								  </div>
-			  
-								<div class="ayuda">ELEGÍ EL CAPÍTULO DE TU INTERÉS</div>
-							
-							</div>
-						
-						</div>
-						</div><div class="own-size"><div class="libro-content">
-							<h1 class="libro-titulo"><span class="numero">05</span> VIDEOS MULTIMEDIA</h1>
-							<div class="lista">
-								<div><img src="content/editorial/el-beagle/lista-video.png">VIDEO</div>
-								<div><img src="content/editorial/el-beagle/lista-video.png">VIDEO</div>
-								<div><img src="content/editorial/el-beagle/lista-video.png">VIDEO</div>
-								<div><img src="content/editorial/el-beagle/lista-video.png">VIDEO</div>
-								<div><img src="content/editorial/el-beagle/lista-video.png">VIDEO</div>
-								<div><img src="content/editorial/el-beagle/lista-video.png">VIDEO</div>
-								<div><img src="content/editorial/el-beagle/lista-video.png">VIDEO</div>
-								<div><img src="content/editorial/el-beagle/lista-video.png">VIDEO</div>
-								<div><img src="content/editorial/el-beagle/lista-video.png">VIDEO</div>
-							</div>
-							
-						<div class="page-nav">
-							<div class="countPages"><span>14 de 14</span></div>
-								<ul>
-									<li class="gotoPage" data-page="4"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="5"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="6"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="7"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="8"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="9"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="10"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="11"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="12"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="13"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="14"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage" data-page="15"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage active noscale" data-page="16"><img src="imgs/libro/page-nav.png"></li>
-									<li class="gotoPage active" data-page="17"><img src="imgs/libro/page-nav.png"></li>
-								</ul>
-							</div>
-							
-						</div>
-						</div><div class="own-size"></div>
-						<div class="hard fixed back-side last-but-one"><div class="depth"></div><img src="content/editorial/el-beagle/back.jpg"></div>
-						<div class="hard back-side"><img src="content/editorial/el-beagle/back.jpg"></div>
-						
-						
-					</div>
-				</div>
-			</div>
-		
-		
-		<div class="mapa-interactivo inactive">
-		
-			<div class="el-mapa">
-				
-			   <div class="mapa-info close" id="estrecho-de-magallanes">
-			   
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-					
-					<div class="mas-info"><a href="#">+ INFO</a></div>
-			   
-			   </div>
-				
-				<div class="puntos">
-				  <div class="tema sub-uno">
-					<div class="punto auto-delay" data-open="estrecho-de-magallanes"><span>+</span></div>
-				  </div>
-			   </div>
-			   				
-				
-				<div class="achicar-pantalla"><a href="#" onclick="closeMapa(); return false;"><img src="imgs/libro/achicar-pantalla.png"></a></div>
-				
-			</div>
-		
-		</div>
-		
-		
-		</div>
+    <div class="ayuda">ELEGÍ LA TEMÁTICA DE TU INTERÉS</div>
 
-		<div class="ayuda">ELEGÍ LA TEMÁTICA DE TU INTERÉS</div>
+  </div>
 
-	</div>
-	
   <link rel="stylesheet" href="{{ asset('css/libro.css') }}">
-	
-  
-        
+
+
+
 {% endblock %}
 
 
@@ -564,8 +572,67 @@
 
 {% block javascripts %}
   <script src="{{ asset('js/turn.min.js') }}" type="text/javascript" charset="utf-8"></script>
-	<script src="{{ asset('js/libro.js') }}" type="text/javascript" charset="utf-8"></script>
+  <script src="{{ asset('js/libro.js') }}" type="text/javascript" charset="utf-8"></script>
 
-        
-        
+
+  <script type="text/javascript" charset="utf-8">
+  var spData = [];
+  function doDataPage1(json) {
+      spData[1] = json.feed.entry;
+  }
+  function doDataPage2(json) {
+      spData[2] = json.feed.entry;
+  }
+  
+  function drawParagraph(div, val) {
+      var p = $("<p />");
+      console.log(val);
+      p.append(val);
+      div.append(p);
+      return div
+  }
+  
+  function drawPage(parent, rowData) {
+      var div = $("<div />");
+      if (rowData == null) return null;
+	  if (rowData.length == 0) return null;
+	  for(var c=0; c<rowData.length; c++) {
+            drawParagraph(div, rowData[c]);
+	  };
+      parent.append(div);
+  }
+  
+  function readData(parent,id) {
+    
+      var data = spData[id];
+      //var table = drawTable(parent);
+      var rowData = [];
+      console.log('readingData');
+      
+      for(var r=0; r<data.length; r++) {
+          var cell = data[r]["title"];
+            //console.log(cell['$t']);
+          var val = cell['$t'];
+          
+          if (cell.col == 1) {
+              //drawRow(table, rowData);
+              rowData = [];
+          }
+          rowData.push(val);
+      }
+      //console.log(rowData);
+      //return rowData;
+      drawPage(parent, rowData);
+  }
+  $(document).ready(function(){
+      readData($("#dataPage01"),1);
+      readData($("#dataPage02"),2);
+  });
+  /*
+   * 
+   */
+</script>
+<script src="https://spreadsheets.google.com/feeds/list/12EQ_buapSBRsZLmI0Bm7BCOwJAUQMIJKGoNMfBCGqFs/1/public/basic?alt=json-in-script&callback=doDataPage1"></script>
+<script src="https://spreadsheets.google.com/feeds/list/12EQ_buapSBRsZLmI0Bm7BCOwJAUQMIJKGoNMfBCGqFs/2/public/basic?alt=json-in-script&callback=doDataPage2"></script>
+  
 {% endblock %}
