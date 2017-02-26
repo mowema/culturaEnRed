@@ -3,57 +3,151 @@
 {% block idbody %}museos{% endblock %}
 {% block body %}
 
-    <div class="logo"><a href="/#inicio"><img src="imgs/logo.png"></a></div>
+  <div class="logo"><a href="/#inicio"><img src="imgs/logo.png"></a></div>
 
-    <div class="seccion"><img src="imgs/biblioteca/boton-biblioteca.png"></div>
+  <div class="seccion"><img src="imgs/biblioteca/boton-biblioteca.png"></div>
 
-    <div class="container-full bg-museos">
+  <div class="container-full bg-museos">
+    <div class="background_image"></div>
 
-      <div class="temas-container">
+    <div class="temas-container">
 
-        <div class="temas">
-          <div class="tema uno">
-            <div class="punto auto-delay"><span>+</span></div>
-          </div>
-          <div class="tema dos">
-            <!--div class="titulo">TEMATICA</div-->
-            <div class="punto auto-delay"><span>+</span></div>
-          </div>
-          <div class="tema tres">
-            <!--div class="titulo">TEMATICA</div-->
-            <div class="punto auto-delay"><span>+</span></div>
-          </div>
-          <div class="tema cuatro">
-            <!--div class="titulo">TEMATICA</div-->
-            <div class="punto auto-delay"><span>+</span></div>
-          </div>
-          <div class="tema cinco">
-            <!--div class="titulo">TEMATICA</div-->
-            <div class="punto auto-delay"><span>+</span></div>
-          </div>
-          <div class="tema seis">
-            <div class="desplegable close">
-              <div class="titulo">NACIONALES</div>
-              <ul>
-                <li>DEL GRABADO</li>
-                <li>ARTE ORIENTAL</li>
-                <li>ARTE DECORATIVO</li>
-                <li>BELLAS ARTES</li>
-              </ul>
-            </div>
-            <div class="punto auto-delay"><span>+</span></div>
-          </div>
-         </div>
-
+      <div class="temas">
+        <div class="tema uno">
+          <div class="punto auto-delay"><span>+</span></div>
         </div>
+        <div class="tema dos">
+          <!--div class="titulo">TEMATICA</div-->
+          <div class="punto auto-delay"><span>+</span></div>
+        </div>
+        <div class="tema tres">
+          <!--div class="titulo">TEMATICA</div-->
+          <div class="punto auto-delay"><span>+</span></div>
+        </div>
+        <div class="tema cuatro">
+          <!--div class="titulo">TEMATICA</div-->
+          <div class="punto auto-delay"><span>+</span></div>
+        </div>
+        <div class="tema cinco">
+          <!--div class="titulo">TEMATICA</div-->
+          <div class="punto auto-delay"><span>+</span></div>
+        </div>
+        <div class="tema seis">
+          <div class="desplegable close">
+            <div class="titulo">NACIONALES</div>
+            <ul>
+              <li>DEL GRABADO</li>
+              <li>ARTE ORIENTAL</li>
+              <li>ARTE DECORATIVO</li>
+              <li><a href="#" class="open-tema" data-open="bellas-artes">BELLAS ARTES</a></li>
+            </ul>
+          </div>
+          <div class="punto auto-delay"><span>+</span></div>
+        </div>
+      </div>
 
     </div>
 
-    <div class="ayuda">ELEGÍ LA CATEGORÍA DE TU INTERÉS</div>
+    <!-- SUB-INTERNA -->
+    <div id="bellas-artes" class="sub-interna inactive">
+      <div class="temas inactive">
+        <div class="tema sub-uno gotoPlanta" >
+          <div class="auto-delay"><span>HEY</span></div>
+        </div>
+        <div class="tema sub-dos gotoPlanta" >
+          <div class="auto-delay"><span>HEY</span></div>
+        </div>
+        <div class="tema sub-tres gotoPlanta" >
+          <div class="auto-delay"><span>HEY</span></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="ayuda">ELEGÍ LA CATEGORÍA DE TU INTERÉS</div>
 {% endblock %}
 
 {% block stylesheets %}
-<style>
-   
-</style>
+  <style>
+    
+    #museos .bg-museos {
+        background-image: none !important;
+    }
+
+    @-webkit-keyframes fade_halfway{
+      0%{
+        opacity: .9;}
+      100%{
+        opacity: .4;}
+    }
+    
+    .bg-museos .background_image {
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: url(imgs/museos/bg-museos.jpg);
+      background-position: 50% 50%;
+      background-size: 130%;
+      opacity: .9;
+      width: 100%;
+      height: 100%;
+    }
+    .opaque .background_image {
+      opacity: .4;
+      -webkit-animation: expand 1s;
+    }
+
+    #bellas-artes.sub-interna{
+      width: 100%;
+      height:100%;
+    }
+  </style>
 {% endblock %}
+
+
+{% block javascripts %}
+  <!-- <script type="text/javascript" src="{{ asset('/js/script_museos.js') }}"></script> -->
+
+  <script>
+    $("#museos .temas .tema:nth-child(4) .esfera, #museos .sub-seccion"
+            ).on("click", function (e) {
+      $(".principal").removeClass("active").addClass("inactive")
+      $(".interna").removeClass("inactive").addClass("active")
+      $(".temas").removeClass("inactive")
+      $(".sub-interna").removeClass("active").addClass("inactive")
+      $(".ayuda").html("ELEGÍ SEGÚN TU INTERÉS")
+    });
+
+    $("#museos .seccion").on("click", function (e) {
+
+      $(".bg-museos").removeClass("opaque")
+      $(".desplegable.open").removeClass("open")
+      $(".principal").removeClass("inactive").addClass("active")
+      $(".interna").removeClass("active").addClass("inactive")
+      $(".temas").removeClass("inactive")
+      $(".sub-interna").removeClass("active").addClass("inactive")
+      $(".sub-interna .temas").removeClass("active").addClass("inactive")
+      $(".seccion").removeClass("small")
+      $(".ayuda").html("ELEGÍ LA TEMÁTICA DE TU INTERÉS")
+    });
+
+    $("#museos .open-tema").on("click", function (e) {
+      e.preventDefault()
+      var subsection = "#" + $(this).data("open")
+      $(subsection).removeClass("inactive").addClass("active")
+
+      $(".seccion").addClass("small")
+      $(".temas").addClass("inactive")
+      $(".sub-interna .temas").removeClass("inactive").addClass("active")
+      $(".ayuda").html("ELEGÍ UNA PLANTA")
+
+      $(".bg-museos").addClass("opaque")
+    });
+  </script>
+{% endblock %}
+
+
