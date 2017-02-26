@@ -605,23 +605,18 @@
   function readData(parent,id) {
     
       var data = spData[id];
-      //var table = drawTable(parent);
       var rowData = [];
       console.log('readingData');
       
       for(var r=0; r<data.length; r++) {
           var cell = data[r]["title"];
-            //console.log(cell['$t']);
           var val = cell['$t'];
           
           if (cell.col == 1) {
-              //drawRow(table, rowData);
               rowData = [];
           }
           rowData.push(val);
       }
-      //console.log(rowData);
-      //return rowData;
       drawPage(parent, rowData);
   }
   $(document).ready(function(){
