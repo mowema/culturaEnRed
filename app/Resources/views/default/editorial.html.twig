@@ -586,10 +586,9 @@
   
   function drawParagraph(div, val) {
       var p = $("<p />");
-      console.log(val);
       p.append(val);
       div.append(p);
-      return div
+      return div;
   }
   
   function drawPage(parent, rowData) {
@@ -603,15 +602,11 @@
   }
   
   function readData(parent,id) {
-    
       var data = spData[id];
       var rowData = [];
-      console.log('readingData');
-      
       for(var r=0; r<data.length; r++) {
           var cell = data[r]["title"];
           var val = cell['$t'];
-          
           if (cell.col == 1) {
               rowData = [];
           }
