@@ -52,36 +52,41 @@
     <div id="bellas-artes" class="sub-interna inactive">
       <div class="temas inactive">
         <div class="tema sub-uno gotoPlanta" >
-          <div class="auto-delay"><span>HEY</span></div>
-        </div>
-        <div class="tema sub-dos gotoPlanta" >
-          <div class="auto-delay"><span>HEY</span></div>
-        </div>
-        <div class="tema sub-tres gotoPlanta" >
-          <div class="auto-delay"><span>HEY</span></div>
-        </div>
+          <div class="auto-delay"><div class="planta-image"></div>
+            <div class="planta-header"><h3>planta <span>1</span></h3><p>PINTURAS</p></div>
+          </div></div>
+        <div class="tema sub-dos gotoPlanta" ><div class="auto-delay"><div class="planta-image"></div>
+            <div class="planta-header"><h3>planta <span>2</span></h3><p>ESCULTURAS</p></div>
+          </div></div>
+        <div class="tema sub-tres gotoPlanta" ><div class="auto-delay"><div class="planta-image"></div>
+            <div class="planta-header"><h3>planta <span>3</span></h3><p>EXHIBICIONES</p></div>
+          </div></div>
       </div>
     </div>
 
   </div>
 
   <div class="ayuda">ELEGÍ LA CATEGORÍA DE TU INTERÉS</div>
+
+  <!--
+  <ul class="cloud-points">
+                <li class="cloud-point-one"><div class="punto auto-delay"><span>+</span></div></li>
+                <li class="cloud-point-one"><div class="punto auto-delay"><span>+</span></div></li>
+                <li class="cloud-point-one"><div class="punto auto-delay"><span>+</span></div></li>
+              </ul>
+  -->
 {% endblock %}
 
 {% block stylesheets %}
   <style>
-    
-    #museos .bg-museos {
-        background-image: none !important;
+    .gotoPlanta h3 {
+      font-size: 24px;
     }
 
-    @-webkit-keyframes fade_halfway{
-      0%{
-        opacity: .9;}
-      100%{
-        opacity: .4;}
+    #museos .bg-museos {
+      background-image: none !important;
     }
-    
+
     .bg-museos .background_image {
       position: absolute;
       z-index: 0;
@@ -92,18 +97,96 @@
       background: url(imgs/museos/bg-museos.jpg);
       background-position: 50% 50%;
       background-size: 130%;
-      opacity: .9;
+      opacity: 1;
       width: 100%;
       height: 100%;
     }
+
     .opaque .background_image {
-      opacity: .4;
-      -webkit-animation: expand 1s;
+      background-position: 240% 50%;
+      -webkit-animation: expand 5s;
     }
 
     #bellas-artes.sub-interna{
       width: 100%;
       height:100%;
+    }
+    #bellas-artes.sub-interna .temas{
+      margin: 0 auto;
+      width: 60%;
+      height:100%;
+    }
+
+    #bellas-artes.sub-interna .tema {
+      position: relative;
+      display:block;
+    }  
+
+    .tema.sub-uno > div .planta-header {
+      left: 10%;
+    } 
+    .tema.sub-uno > div .cloud-points {
+
+      position: relative;
+      display:block;
+    } 
+    .tema.sub-dos > div .planta-header {
+      left: 70%;
+      text-align: right;
+    } 
+    .tema.sub-tres > div .planta-header {
+      left: 10%;
+    }
+
+    .planta-header h3 {
+      border-radius: 4px;
+      font-size: 30px;
+      font-family: serif;
+      background-color: rgba(60,60,60,0.1);
+      padding:2px 30px;
+      font-style: italic;
+      margin-bottom: 4px
+    }
+    .planta-header p {
+      text-align: center;
+      font-size: 20px;
+      color:violet;
+      font-weight: 500;
+    }
+    .planta-header {
+      top: 20%;
+      position:absolute}
+
+    .tema.sub-uno {
+      top: 14%;
+    } 
+    .tema.sub-dos {
+      top: 14%;
+    }
+    .tema.sub-dos .planta-image {
+      opacity: .7;
+    }
+    .tema.sub-tres {
+      top: 14%;
+    }
+    .tema.sub-tres .planta-image {
+      opacity: .5;
+    }
+
+    .tema > div {
+      clear: both
+    }
+
+    .planta-image{
+      margin: auto;
+      height:220px;
+      width:200px;
+      display:block;
+      background-image:url(content/museos/planta-medium.png)
+    }
+    
+    .selected .planta-image{
+      height:200%
     }
   </style>
 {% endblock %}
