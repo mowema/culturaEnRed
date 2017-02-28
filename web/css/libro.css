@@ -132,7 +132,7 @@
 /* GENERAL FLIPBOOK */
 
 .flipbook-viewport{
-	overflow:hidden;
+	/*overflow:hidden;*/
 	width:100%;
 	height:100%;
 }
@@ -192,6 +192,7 @@
 
 
 .flipbook-viewport *{
+	-moz-transition: none;
 	-webkit-transition: none;
     transition: none;
 }
@@ -348,7 +349,7 @@
   }
 }
 
-@-webkit-keyframes zoomIn {
+@-webkit-keyframes zoomOut {
   0%{
     transform: scale(1);
   }
@@ -377,10 +378,15 @@
 
 .animated-book.open{
     animation: zoomIn 1s both;
+	-moz-animation: zoomIn 1s both;
+	-webkit-animation: zoomIn 1s both;
+	
 }
 
 .animated-book.close{
     animation: zoomOut 1s both;
+	-moz-animation: zoomOut 1s both;
+	-webkit-animation: zoomOut 1s both;
 }
 
 
