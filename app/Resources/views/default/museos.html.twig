@@ -62,6 +62,13 @@
             <div class="planta-header"><h3>planta <span>3</span></h3><p>EXHIBICIONES</p></div>
           </div></div>
       </div>
+      <div class="tema-title auto-delay " style="animation-delay: 2.2s;">NACIONALES</div>
+      <div class="tema-sub-title auto-delay " style="animation-delay: 2.2s;">BELLAS ARTES</div>
+      <div class="tema-spot auto-delay " style="animation-delay: 2.2s;"><img
+      style="width: 290px;"
+      src="/imgs/museos/bellas-artes-spot.png"></div>
+      <div class="tema-epic auto-delay " style="animation-delay: 2.2s;">
+      <p>Lorem ipsum quietan vermit forrol, de mascretoiplan. Lorem ipsum quietan vermit forrol, de mascretoiplan</p></div>
     </div>
 
   </div>
@@ -163,14 +170,14 @@
       z-index: 90;
     } 
     .tema.sub-dos {
-      top: 0%;
+      top: 10%;
       z-index: 80;
     }
     .tema.sub-dos .planta-image {
       opacity: .7;
     }
     .tema.sub-tres {
-      top: -8%;
+      top: 12%;
       z-index: 70;
     }
     .tema.sub-tres .planta-image {
@@ -192,6 +199,79 @@
     .selected .planta-image{
       height:200%
     }
+
+
+  /* MUSEOS */
+
+  
+    #museos .tema-title {
+    position: absolute;
+    color: violet;
+    font-size: 34px;
+    font-weight: 300;
+    background: rgba(230,230,230,0.6);
+    padding: 15px 60px 15px 30px;
+    border-radius: 16px;
+    top: 21%;
+    right: -100%;
+    animation: slideRightBorder 1s 0.2s ease;
+    animation-fill-mode: forwards;
+    }
+
+    #museos .tema-sub-title {
+    position: absolute;
+    color: #17B4FF;
+    font-size: 34px;
+    font-weight: bold;
+    background: rgba(230,230,230,0.6);
+    padding: 30px 60px 30px 30px;
+    border-radius: 16px;
+    top: 31%;
+    right: -100%;
+    animation: slideRightBorder 1s 0.2s ease;
+    animation-fill-mode: forwards;
+    }
+
+    #museos .tema-spot {
+    position: absolute;
+    top: 41%;
+    right: -100%;
+    animation: slideRightBorder 1s 0.2s ease;
+    animation-fill-mode: forwards;
+    }
+
+    #museos .tema-epic {
+      width:250px;
+    position: absolute;
+    color: #444;
+    font-size: 18px;
+    font-weight: normal;
+    background: rgba(230,230,230,0.6);
+    padding: 8px 46px;
+    border-radius: 16px;
+    top: 64%;
+    right: -100%;
+    animation: slideRightBorder 1s 0.2s ease;
+    animation-fill-mode: forwards;
+    }
+
+
+#museos .tema-spot.inactive {
+  opacity:0;
+  z-index: -999;
+}
+
+#museos .tema-spot.active {
+    opacity:1;
+  z-index: 9999;
+}
+
+
+#museos .inactive > div{
+    opacity: 0;
+    z-index:-1;
+}
+
   </style>
 {% endblock %}
 
