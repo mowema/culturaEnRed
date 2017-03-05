@@ -5,7 +5,7 @@
 
   <div class="logo"><a href="/#inicio"><img src="imgs/logo.png"></a></div>
 
-  <div class="seccion"><img src="imgs/biblioteca/boton-biblioteca.png"></div>
+  <div class="seccion"><img src="imgs/museos/boton-museos.png"></div>
 
   <div class="container-full bg-museos">
     <div class="background_image"></div>
@@ -48,6 +48,58 @@
 
     </div>
 
+    <!-- PLANTA UNO -->
+    <div id="bellas-artes-planta-uno" class="sub-sub-interna inactive">
+      <div class="planta-image"></div>
+      <div class="obras">
+        <div class="obra uno">
+          <div class="punto auto-delay"><span>+</span></div>
+        </div>
+        <div class="obra dos">
+          <div class="punto auto-delay"><span>+</span></div>
+        </div>
+        <div class="obra tres">
+          <div class="punto auto-delay"><span>+</span></div>
+        </div>
+    </div>
+    </div>
+
+    <div id="left-screen-floor" style="display:none">
+      <img src="/imgs/museos/lamano.png" width="40%" style="margin: 0 0 20px 60px;">
+      <div class="panel">
+        <h3 style="margin-bottom:0;color:#ED1C9B">LA MANO DE DIOS</h3>
+        <h4 style="margin-top:0;color:#17B4FF">RODIN, RENÉ</h4>
+      </div>
+      <div class="panel"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed facilisis velit velit. Sed venenatis leo id est vehicula, nec vehicula leo porttitor. Nunc sed varius dui, eleifend posuere velit. Donec malesuada, lectus id tincidunt hendrerit, lacus urna pellentesque justo, sit amet ullamcorper ipsum lectus et est. Praesent mattis imperdiet maximus.</p><a>+ INFO</a>
+      </div>
+      
+    </div>
+    <div id="right-screen-floor" style="display:none"> 
+      <img src="/imgs/museos/cuadro.png" width="60%" style="margin: 0 0 20px 60px;">
+      <div class="panel">
+        <h3 style="margin-bottom:0;color:#ED1C9B">LA VUELTA DEL MALÓN</h3>
+        <h4 style="margin-top:0;color:#17B4FF">DELLA VALLE, ÁNGEL</h4>
+      </div>
+    </div>
+
+    <div class="browser-right inactive">
+      <div class="tema-title auto-delay ">NACIONALES</div>
+      <div class="tema-sub-title auto-delay ">BELLAS ARTES</div>
+      <div class="tema-spot auto-delay " >
+        <img src="/imgs/museos/bellas-artes-spot.png">
+      </div>
+
+      <div class="tema-epic auto-delay " >
+      <p>Lorem ipsum quietan vermit forrol, de mascretoiplan. Lorem ipsum quietan vermit forrol, de mascretoiplan</p></div>
+
+
+      <div class="browse-floor inactive">
+        <div class="planta-image"><span>planta 1</span></div>
+        <div class="planta-image"><span>planta 2</span></div>
+        <div class="planta-image"><span>planta 3</span></div>
+      </div>
+
+    </div>
     <!-- SUB-INTERNA -->
     <div id="bellas-artes" class="sub-interna inactive">
       <div class="temas inactive">
@@ -62,14 +114,12 @@
             <div class="planta-header"><h3>planta <span>3</span></h3><p>EXHIBICIONES</p></div>
           </div></div>
       </div>
-      <div class="tema-title auto-delay " style="animation-delay: 2.2s;">NACIONALES</div>
-      <div class="tema-sub-title auto-delay " style="animation-delay: 2.2s;">BELLAS ARTES</div>
-      <div class="tema-spot auto-delay " style="animation-delay: 2.2s;"><img
-      style="width: 290px;"
-      src="/imgs/museos/bellas-artes-spot.png"></div>
-      <div class="tema-epic auto-delay " style="animation-delay: 2.2s;">
-      <p>Lorem ipsum quietan vermit forrol, de mascretoiplan. Lorem ipsum quietan vermit forrol, de mascretoiplan</p></div>
+      
+
+      
+
     </div>
+
 
   </div>
 
@@ -86,6 +136,20 @@
 
 {% block stylesheets %}
   <style>
+a {
+  font-weight: bold;
+    color: #17B4FF;
+}
+
+a:hover {
+    color: #ffffff;
+    background: #17B4FF;
+}
+
+.tema,.obra {
+  position: absolute;
+  cursor: pointer;
+}
     .gotoPlanta h3 {
       font-size: 24px;
     }
@@ -114,6 +178,11 @@
       -webkit-animation: expand 5s;
     }
 
+    #bellas-artes-planta-uno{
+      position: absolute;
+      width: 100%;
+      height:100%;
+    }
     #bellas-artes.sub-interna{
       width: 100%;
       height:100%;
@@ -143,6 +212,14 @@
     } 
     .tema.sub-tres > div .planta-header {
       left: 10%;
+    }
+
+    .panel{
+      border-radius: 4px;
+      background: rgba(230,230,230,0.6);
+      padding:2px 30px;
+      margin-bottom: 8px;
+      text-align: center;
     }
 
     .planta-header h3 {
@@ -189,9 +266,18 @@
     }
 
     .planta-image{
-      margin: auto;
+      margin:auto;
       height:220px;
       width:200px;
+      display:block;
+      background-image:url(content/museos/planta-medium.png)
+    }
+
+    .sub-sub-interna .planta-image{
+      height:330px;
+      width:300px;
+      background-size:300px;
+      margin: 21vh auto;
       display:block;
       background-image:url(content/museos/planta-medium.png)
     }
@@ -238,6 +324,10 @@
     right: -100%;
     animation: slideRightBorder 1s 0.2s ease;
     animation-fill-mode: forwards;
+
+    text-align: center;
+    width: 300px;
+
     }
 
     #museos .tema-epic {
@@ -255,13 +345,48 @@
     animation-fill-mode: forwards;
     }
 
+    #museos .browse-floor {
+
+    position: absolute;
+    top: 60%;
+    right: -100%;
+    animation: slideRightBorder 1s 0.2s ease;
+    animation-fill-mode: forwards;
+
+    text-align: center;
+    width: 300px;
+
+    }
+
+    .planta-image span{ 
+      font-style: italic;
+      color: #17B4FF;
+
+    }
+
+    #museos .browse-floor .planta-image{
+      background-size:70px;
+      height:79px;
+      width:70px;
+    }
+
+
+
 
 #museos .tema-spot.inactive {
   opacity:0;
   z-index: -999;
 }
 
-#museos .tema-spot.active {
+#museos .browser-right.inactive,
+.inactive {
+  display:none;
+  opacity:0;
+  z-index: -999;
+}
+
+#museos .tema-spot.active,
+.active {
     opacity:1;
   z-index: 9999;
 }
@@ -271,6 +396,94 @@
     opacity: 0;
     z-index:-1;
 }
+#museos .sub-sub-interna.inactive{
+    opacity: 0;
+    z-index:-1;
+}
+#museos .sub-interna > div.inactive{
+    opacity: 0;
+    z-index:-100;
+}
+
+
+#museos .obra.uno {
+    top: 21%;
+    left: 46%;
+    color: #5CB759;
+}
+
+#museos .obra.uno .punto {
+    background-color: #5CB759;
+    opacity: 0;
+    animation: bounceIn 0.5s;
+    animation-fill-mode: forwards;
+}
+#museos .obra.dos {
+    top: 28%;
+    left: 58%;
+    color: #2861FF;
+}
+
+#museos .obra.dos .punto {
+    background-color: #2861FF;
+    opacity: 0;
+    animation: bounceIn 0.5s;
+    animation-fill-mode: forwards;
+}
+#museos .obra.tres {
+    top: 48%;
+    left: 48%;
+    color: #9B26AF;
+}
+
+#museos .obra.tres .punto {
+    background-color: #9B26AF;
+    opacity: 0;
+    animation: bounceIn 0.5s;
+    animation-fill-mode: forwards;
+}
+.tema-spot img.smaller{
+  width:200px
+}
+.tema-spot img{
+  width:290px
+}
+
+#left-screen-floor {
+width:260px;
+z-index:999999;
+    position: absolute;
+    left: 10%;
+    top: 30%;
+}
+#right-screen-floor {
+
+width:280px;
+z-index:999999;
+    position: absolute;
+    right: 28%;
+    top: 50%;
+}
+
+/*
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    left: 50%;
+    top: 50%;
+    margin-left: -330px;
+    margin-top: -330px;
+}
+
+
+    .sub-sub-interna .planta-image{
+      height:330px;
+      width:300px;
+      background-size:300px;
+      margin: 21vh auto;
+      display:block;
+      background-image:url(content/museos/planta-medium.png)
+    }*/
 
   </style>
 {% endblock %}
@@ -287,10 +500,13 @@
       $(".temas").removeClass("inactive")
       $(".sub-interna").removeClass("active").addClass("inactive")
       $(".ayuda").html("ELEGÍ SEGÚN TU INTERÉS")
+
+
     });
 
     $("#museos .seccion").on("click", function (e) {
 
+      $(".browser-right").removeClass("active").addClass("inactive")
       $(".bg-museos").removeClass("opaque")
       $(".desplegable.open").removeClass("open")
       $(".principal").removeClass("inactive").addClass("active")
@@ -298,7 +514,16 @@
       $(".temas").removeClass("inactive")
       $(".sub-interna").removeClass("active").addClass("inactive")
       $(".sub-interna .temas").removeClass("active").addClass("inactive")
+      $(".sub-sub-interna").removeClass("active").addClass("inactive")
       $(".seccion").removeClass("small")
+
+
+      $(".browse-floor").removeClass("active")
+      $(".browse-floor").addClass("inactive")
+      $(".tema-epic").addClass("active")
+      $(".tema-epic").removeClass("inactive")
+      $(".tema-spot img").removeClass("smaller")
+
       $(".ayuda").html("ELEGÍ LA TEMÁTICA DE TU INTERÉS")
     });
 
@@ -307,6 +532,7 @@
       var subsection = "#" + $(this).data("open")
       $(subsection).removeClass("inactive").addClass("active")
 
+      $(".browser-right").removeClass("inactive").addClass("active")
       $(".seccion").addClass("small")
       $(".temas").addClass("inactive")
       $(".sub-interna .temas").removeClass("inactive").addClass("active")
@@ -314,6 +540,36 @@
 
       $(".bg-museos").addClass("opaque")
     });
+
+
+$("#bellas-artes .temas .tema:nth-child(1)"
+    ).on("click", function (e) {
+      /*e.preventDefault()
+      var planta = "#" + $(this).data("open")
+      $(planta).removeClass("inactive").addClass("active")
+
+browser-right
+    width: 210px;
+tema-epic
+left-screen-floor
+
+
+      $("#browser-right").removeClass("inactive").addClass("inactive")
+      */
+$('#left-screen-floor').toggle()
+$('#right-screen-floor').toggle()
+      $(".browse-floor").removeClass("inactive")
+      $(".browse-floor").addClass("active")
+      $(".tema-epic").addClass("inactive")
+      $(".tema-spot img").addClass("smaller")
+      $(".sub-interna > div").removeClass("active")
+      $(".sub-interna > div").addClass("inactive")
+      $(".sub-interna").removeClass("active")
+      $(".sub-interna").addClass("inactive")
+      $("#bellas-artes-planta-uno").removeClass("inactive")
+
+    });
+
   </script>
 {% endblock %}
 
