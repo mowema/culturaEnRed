@@ -13,16 +13,55 @@
 
   <div id="thecanvas" class="auto-delay"></div>
 
+
+  <div class="footer-bg auto-delay" >
+    <img src="/imgs/museos/explore_footer.png">
+  </div>
+
+  <div id="left-screen-floor">
+    
+    <div class="panel">
+      <h1 style="color:#ED1C9B;font-weight: 300">ORIGEN</h1>
+    </div>
+    <div class="panel">
+    <h4>Donación Ivonne Necol 
+de Fourvel Rigolleau</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed facilisis velit velit. Sed venenatis leo id est vehicula, nec vehicula leo porttitor. Nunc sed varius dui, eleifend posuere velit. Donec malesuada, lectus id tincidunt hendrerit, lacus urna pellentesque justo, sit amet ullamcorper ipsum lectus et est. Praesent mattis imperdiet maximus.</p>
+      
+    </div>
+  </div>
+
 {% endblock %}
 
 {% block stylesheets %}
   <style>
+
+
+#left-screen-floor {
+max-width:20%;
+z-index:999999;
+    position: absolute;
+    left: 6%;
+    top: 30%;
+}
+
 #thecanvas   {
   top:0;
   position:absolute;
       height:100vh;
       width:100%;
 }
+.footer-bg{
+  width:100%;
+  height:187px;
+  background: url(/imgs/museos/footer_bg.jpg);
+  position:absolute;bottom:0;
+}
+
+.footer-bg img
+{display: block;
+    margin: 25px auto;}
+
 .secciones{
   position:absolute;
   right:50px;
