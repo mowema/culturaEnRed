@@ -3,7 +3,42 @@
     <head>
         <meta charset="UTF-8" />
         <title>{% block title %}Cultura en Red{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        {% block stylesheets %}
+        {% endblock %}
+        <style>
+             
+.container-full-grad {
+    overflow: hidden;
+    background: linear-gradient(0deg, #C1FBFF, #C1FBFF);
+    min-height: 100%;
+    width: 100;
+    height: 100vh;
+    position: relative;
+    z-index: -500;
+}
+.container-full-grad:before,
+.container-full-grad:after{
+    content:'';
+    position:absolute;
+    width:100%;
+    height:100%;
+}
+.container-full-grad:before{
+    background: white;
+    box-shadow: 0 0 130px 44px white;
+    z-index:-400;
+    top: -46%;
+    opacity: 0.8;
+}
+.container-full-grad:after {
+    background: white;
+    z-index:-300;
+    top: -23%;
+    box-shadow: 0 0 200px 74px white;
+    opacity: 1;
+    border-radius: 100%;
+}
+        </style>
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
         
         <link href="{{ asset('styles.css') }}" rel="stylesheet">
@@ -14,12 +49,11 @@
     <body id="{% block idbody %}{% endblock %}" class="preload">
       
         <div class="loader"></div>
-    
         {% block body %}{% endblock %}
-        
         <script type="text/javascript" src="{{ asset('js/jquery-2.2.4.min.js') }}"></script>
         <script type="text/javascript" src="{{ asset('js/scripts.js') }}"></script>
   
         {% block javascripts %}{% endblock %}
+
     </body>
 </html>

@@ -1,0 +1,261 @@
+{% extends 'base.html.twig' %}
+
+{% block idbody %}museos{% endblock %}
+{% block body %}
+<div class="container-full-grad"></div>
+  <div class="logo"><a href="/museos"><img src="/imgs/logo.png"></a></div>
+
+  <div class="secciones auto-delay" ><img src="/imgs/museos/menu-museos.png"></div>
+
+  <div class="obra-title auto-delay " style="animation-delay: 2s;">la mano de dios</div>
+
+  <div class="obra-sidemenu auto-delay"><img src="/imgs/museos/sidemenu-museos.png"></div>
+
+  <div id="thecanvas" class="auto-delay"></div>
+
+{% endblock %}
+
+{% block stylesheets %}
+  <style>
+#thecanvas   {
+  top:0;
+  position:absolute;
+      height:100vh;
+      width:100%;
+}
+.secciones{
+  position:absolute;
+  right:50px;
+  top:30px;
+  right: -100%;
+  animation: slideRightBorder 1s 0.2s ease;
+  animation-fill-mode: forwards;
+  padding:0 65px 0 0;
+}
+
+.obra-sidemenu {
+  position: absolute;
+  padding:0 50px 0 0;
+  top: 30%;
+  right: -100%;
+  animation: slideRightBorder 1s 0.2s ease;
+  animation-fill-mode: forwards;
+}
+
+.obra-title {
+  font-family: serif;
+  position: absolute;
+  color: violet;
+  font-size: 44px;
+  font-style: italic;
+  font-weight: 700;
+  background: rgba(230,230,230,0.6);
+  padding: 15px 60px 15px 30px;
+  border-radius: 16px;
+  top: 19%;
+  right: -100%;
+  animation: slideRightBorder 1s 0.2s ease;
+  animation-fill-mode: forwards;
+}
+
+
+  </style>
+
+{% endblock %}
+
+
+{% block javascripts %}
+
+
+    <script src="/assets/three.js"></script>
+    <script src="/assets/OBJLoader.js"></script>
+
+    <script src="/assets/OrbitControls.js"></script>
+
+    <script>
+
+      var container;
+var text;
+      var camera, scene, renderer;
+
+      var mouseX = 0, mouseY = 0;
+
+      var windowHalfX = window.innerWidth / 2;
+      var windowHalfY = window.innerHeight / 2;
+
+
+      init();
+      animate();
+
+      function initCamera() {
+        camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 2000 );
+        camera.position.z = 250;
+      }   
+
+      function init() {
+
+        container = document.createElement( 'div' );
+
+        text = document.createElement( 'p' );
+        text.classList.add('center');
+
+        document.body.appendChild( text );
+
+        //document.body.appendChild( container );
+
+
+        document.getElementById("thecanvas").appendChild(container);
+
+        initCamera()
+
+        // scene
+        scene = new THREE.Scene();
+
+        // LIGHTS
+
+        hemiLight = new THREE.HemisphereLight( 0xffffff, 0xffffff, 0.6 );
+        hemiLight.color.setHSL( 0.6, 0.5, 0.6 );
+        hemiLight.groundColor.setHSL( 0.095, 1, 0.75 );
+        hemiLight.position.set( 0, 1000, 0 );
+        scene.add( hemiLight );
+
+        //
+
+        dirLight = new THREE.DirectionalLight( 0xffffff, 0.6 );
+        dirLight.color.setHSL( 0.1, 1, 0.95 );
+        dirLight.position.set( -1, 1, 1.75 );
+        dirLight.position.multiplyScalar( 30 );
+        scene.add( dirLight );
+
+        dirLight2 = new THREE.DirectionalLight( 0xffffff, 0.4 );
+        dirLight2.color.setHSL( 0.1, 1, 0.95 );
+        dirLight2.position.set( 1.8, 0.4, -1.4 );
+        dirLight2.position.multiplyScalar( 30 );
+        scene.add( dirLight2 );
+
+        dirLight.castShadow = true;
+
+        dirLight.shadowMapWidth = 2048;
+        dirLight.shadowMapHeight = 2048;
+
+        var d = 50;
+
+        dirLight.shadowCameraLeft = -d;
+        dirLight.shadowCameraRight = d;
+        dirLight.shadowCameraTop = d;
+        dirLight.shadowCameraBottom = -d;
+
+        dirLight.shadowCameraFar = 3500;
+        dirLight.shadowBias = -0.0001;
+        //dirLight.shadowCameraVisible = true;
+
+
+        // texture
+
+        var manager = new THREE.LoadingManager();
+        manager.onProgress = function ( item, loaded, total ) {
+
+          console.log( item, loaded, total );
+
+        };
+
+        var texture = new THREE.Texture();
+
+        var onProgress = function ( xhr ) {
+          if ( xhr.lengthComputable ) {
+            var percentComplete = xhr.loaded / xhr.total * 100;
+            text.innerHTML = Math.round(percentComplete, 2) + '% descargado';
+            //console.log( Math.round(percentComplete, 2) + '% downloaded' );
+          }
+        };
+
+        var onError = function ( xhr ) {
+        };
+
+
+        var loader = new THREE.ImageLoader( manager );
+        loader.load( '/assets/lowcount_2light.jpg', function ( image ) {
+
+          texture.image = image;
+          texture.needsUpdate = true;
+
+        } );
+
+        // model
+
+        var loader = new THREE.OBJLoader( manager );
+        loader.load( '/assets/lowcount_2min.obj', function ( object ) {
+
+          object.traverse( function ( child ) {
+
+            if ( child instanceof THREE.Mesh ) {
+
+              child.material.map = texture;
+
+            }
+
+          } );
+
+          object.name = 'thehand';
+          object.position.x = 10;
+          object.position.y = 10;
+          object.scale.x = 60;
+          object.scale.y = 60;
+          object.scale.z = 60;
+          object.rotation.y = 30;
+          scene.add( object );
+
+        }, onProgress, onError );
+
+        //
+
+        renderer = new THREE.WebGLRenderer( { alpha: true } );
+        renderer.setClearColor( 0x000000, 0 );
+        //renderer.setClearColor( 0xffffff, 1);
+        renderer.setPixelRatio( window.devicePixelRatio );
+        //renderer.setSize( window.innerWidth, window.innerHeight );
+        container.appendChild( renderer.domElement );
+
+
+        var controls = new THREE.OrbitControls( camera, renderer.domElement );
+        controls.addEventListener( 'change', render );
+        controls.minPolarAngle = 0; // radians
+        controls.maxPolarAngle = Math.PI/1.6; // radians
+  controls.minDistance = 300;
+  controls.maxDistance = 600;
+        controls.target.set( 0, 0, 0);
+        controls.update();
+
+        //document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+
+        //window.addEventListener( 'resize', onWindowResize, false );
+
+
+        renderer.setSize( window.innerWidth,window.innerHeight );
+
+      }
+
+
+      function animate() {
+
+        requestAnimationFrame( animate );
+        render();
+
+      }
+
+      function render() {
+
+        camera.lookAt( scene.position );
+
+        renderer.render( scene, camera );
+
+      }
+
+    </script>
+
+  <script>
+
+  </script>
+{% endblock %}
+
+
