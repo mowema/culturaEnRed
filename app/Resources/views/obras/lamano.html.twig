@@ -114,14 +114,11 @@ z-index:999999;
     <script>
 
       var container;
-var text;
+      var text;
       var camera, scene, renderer;
-
       var mouseX = 0, mouseY = 0;
-
       var windowHalfX = window.innerWidth / 2;
       var windowHalfY = window.innerHeight / 2;
-
 
       init();
       animate();
@@ -134,17 +131,10 @@ var text;
       function init() {
 
         container = document.createElement( 'div' );
-
         text = document.createElement( 'p' );
         text.classList.add('center');
-
         document.body.appendChild( text );
-
-        //document.body.appendChild( container );
-
-
         document.getElementById("thecanvas").appendChild(container);
-
         initCamera()
 
         // scene
@@ -193,9 +183,7 @@ var text;
 
         var manager = new THREE.LoadingManager();
         manager.onProgress = function ( item, loaded, total ) {
-
           console.log( item, loaded, total );
-
         };
 
         var texture = new THREE.Texture();
@@ -204,7 +192,6 @@ var text;
           if ( xhr.lengthComputable ) {
             var percentComplete = xhr.loaded / xhr.total * 100;
             text.innerHTML = Math.round(percentComplete, 2) + '% descargado';
-            //console.log( Math.round(percentComplete, 2) + '% downloaded' );
           }
         };
 
@@ -214,27 +201,19 @@ var text;
 
         var loader = new THREE.ImageLoader( manager );
         loader.load( '/assets/lowcount_2light.jpg', function ( image ) {
-
           texture.image = image;
           texture.needsUpdate = true;
-
         } );
 
         // model
 
         var loader = new THREE.OBJLoader( manager );
         loader.load( '/assets/lowcount_2min.obj', function ( object ) {
-
           object.traverse( function ( child ) {
-
             if ( child instanceof THREE.Mesh ) {
-
               child.material.map = texture;
-
             }
-
-          } );
-
+          });
           object.name = 'thehand';
           object.position.x = 10;
           object.position.y = 10;
@@ -246,48 +225,39 @@ var text;
 
         }, onProgress, onError );
 
-        //
 
         renderer = new THREE.WebGLRenderer( { alpha: true } );
         renderer.setClearColor( 0x000000, 0 );
         //renderer.setClearColor( 0xffffff, 1);
         renderer.setPixelRatio( window.devicePixelRatio );
-        //renderer.setSize( window.innerWidth, window.innerHeight );
+        renderer.setSize( window.innerWidth, window.innerHeight );
         container.appendChild( renderer.domElement );
-
 
         var controls = new THREE.OrbitControls( camera, renderer.domElement );
         controls.addEventListener( 'change', render );
         controls.minPolarAngle = 0; // radians
         controls.maxPolarAngle = Math.PI/1.6; // radians
-  controls.minDistance = 300;
-  controls.maxDistance = 600;
+        controls.minDistance = 300;
+        controls.maxDistance = 600;
         controls.target.set( 0, 0, 0);
         controls.update();
-
-        //document.addEventListener( 'mousemove', onDocumentMouseMove, false );
-
-        //window.addEventListener( 'resize', onWindowResize, false );
-
-
-        renderer.setSize( window.innerWidth,window.innerHeight );
-
+        window.addEventListener( 'resize', onWindowResize, false );
       }
 
+      function onWindowResize() {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize( window.innerWidth, window.innerHeight );
+      }
 
       function animate() {
-
         requestAnimationFrame( animate );
         render();
-
       }
 
       function render() {
-
         camera.lookAt( scene.position );
-
         renderer.render( scene, camera );
-
       }
 
     </script>
