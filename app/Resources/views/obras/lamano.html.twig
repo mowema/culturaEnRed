@@ -27,7 +27,6 @@
     <h4>Donación Ivonne Necol 
 de Fourvel Rigolleau</h4>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed facilisis velit velit. Sed venenatis leo id est vehicula, nec vehicula leo porttitor. Nunc sed varius dui, eleifend posuere velit. Donec malesuada, lectus id tincidunt hendrerit, lacus urna pellentesque justo, sit amet ullamcorper ipsum lectus et est. Praesent mattis imperdiet maximus.</p>
-      
     </div>
   </div>
 
@@ -131,11 +130,11 @@ z-index:999999;
       function init() {
 
         container = document.createElement( 'div' );
-        text = document.createElement( 'p' );
-        text.classList.add('center');
-        document.body.appendChild( text );
+        //text = document.createElement( 'p' );
+        //text.classList.add('center');
+        //document.body.appendChild( text );
         document.getElementById("thecanvas").appendChild(container);
-        initCamera()
+        initCamera();
 
         // scene
         scene = new THREE.Scene();
