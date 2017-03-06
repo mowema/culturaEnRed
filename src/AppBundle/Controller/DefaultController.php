@@ -63,12 +63,23 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/obras/la-mano-de-dios", name="obras")
+     * @Route("/obras/la-mano-de-dios", name="obra01")
      */
-    public function obrasAction(Request $request)
+    public function obra01Action(Request $request)
     {
         // replace this example code with whatever you need
         return $this->render('obras/lamano.html.twig', [
+            'base_dir' => realpath($this->getParameter('kernel.root_dir').'/..').DIRECTORY_SEPARATOR,
+        ]);
+    }
+
+    /**
+     * @Route("/obras/la-vuelta-del-malon", name="obras02")
+     */
+    public function obra02Action(Request $request)
+    {
+        // replace this example code with whatever you need
+        return $this->render('obras/elmalon.html.twig', [
             'base_dir' => realpath($this->getParameter('kernel.root_dir').'/..').DIRECTORY_SEPARATOR,
         ]);
     }
