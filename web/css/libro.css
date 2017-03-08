@@ -72,12 +72,13 @@
 
 .flipbook .lista>div {
     width: 33%;
+    height: 170px;
     float: left;
     text-align: center;
     color: #E70081;
     font-weight: bold;
     font-size: 11px;
-	cursor: pointer;
+    cursor: pointer;
 }
 
 .flipbook .lista>div:hover img {
