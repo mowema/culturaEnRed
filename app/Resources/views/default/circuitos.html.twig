@@ -1,0 +1,578 @@
+	{% extends 'base.html.twig' %}
+
+	{% block idbody %}circuitos{% endblock %}
+	{% block body %}
+
+    <div class="logo"><a href="index.html#inicio"><img src="imgs/logo.png"></a></div>
+
+    <div class="seccion"><img src="imgs/circuitos/boton-circuitos.png"></div>
+	
+	<div class="botonera hidden">
+		<div>
+			<img class="btn-seccion" src="imgs/circuitos/btn-circuitos.png">
+			CIRCUITOS
+		</div>
+		<div>
+			<img class="btn-musicales" src="imgs/circuitos/btn-musicales.png">
+			MUSICALES
+		</div>
+		<div>
+			<img class="btn-jazz" src="imgs/circuitos/btn-jazz.png">
+			JAZZ
+		</div>
+	</div>
+
+    <div class="container-full bg-circuitos">
+	
+	<div class="principal bg-principal active">
+      <div class="temas-container">
+
+        <div class="temas">
+          <div class="tema seis">
+            <div class="desplegable close">
+              <div class="titulo">MUSICALES</div>
+              <ul>
+                <li>FOLKLORE</li>
+                <li>ALTERNATIVO</li>
+                <li>TANGO</li>
+                <li>JAZZ</li>
+              </ul>
+            </div>
+            <div class="punto auto-delay"><span>+</span></div>
+          </div>
+          <div class="tema uno">
+            <div class="punto auto-delay"><span>+</span></div>
+          </div>
+          <div class="tema dos">
+            <!--div class="titulo">TEMATICA</div-->
+            <div class="punto auto-delay"><span>+</span></div>
+          </div>
+          <div class="tema tres">
+            <!--div class="titulo">TEMATICA</div-->
+            <div class="punto auto-delay"><span>+</span></div>
+          </div>
+          <div class="tema cuatro">
+            <!--div class="titulo">TEMATICA</div-->
+            <div class="punto auto-delay"><span>+</span></div>
+          </div>
+          <div class="tema cinco">
+            <!--div class="titulo">TEMATICA</div-->
+            <div class="punto auto-delay"><span>+</span></div>
+          </div>
+         </div>
+
+       </div>
+	   
+	     <div class="regiones"><img src="imgs/circuitos/regiones.png" ></div>
+	   
+	   	<div class="ayuda">ELEGÍ LA TEMÁTICA DE TU INTERÉS</div>
+	   
+    </div>
+	
+	<div class="interna bg-musica inactive">
+	
+		<div class="tema-title auto-delay " style="animation-delay: 2s;">MUSICALES</div>
+		<div class="tema-sub-title auto-delay " style="animation-delay: 2.2s;">JAZZ</div>
+		
+      <div class="temas-container">
+
+        <div class="temas">
+          <div class="tema seis">
+            <div class="punto auto-delay"><span>+</span></div>
+          </div>
+          <div class="tema dos">
+            <!--div class="titulo">TEMATICA</div-->
+            <div class="punto auto-delay"><span>+</span></div>
+          </div>
+          <div class="tema tres">
+            <!--div class="titulo">TEMATICA</div-->
+            <div class="punto auto-delay"><span>+</span></div>
+          </div>
+          <div class="tema cuatro">
+            <!--div class="titulo">TEMATICA</div-->
+            <div class="punto auto-delay"><span>+</span></div>
+          </div>
+          <div class="tema cinco">
+            <!--div class="titulo">TEMATICA</div-->
+            <div class="punto auto-delay"><span>+</span></div>
+          </div>
+         </div>
+
+       </div>
+	   
+	 
+	   
+	   	<div class="ayuda">ELEGÍ EL ARTISTA DE TU INTERÉS</div>
+	
+	</div>
+	
+	<div class="contenido inactive">
+	
+		<div class="imagen-principal"><img src="imgs/circuitos/foto-lois.jpg" /></div>
+		
+			<div class="temas-container">
+
+			<div class="temas">
+			  <div class="tema tres">
+				<!--div class="titulo">TEMATICA</div-->
+				<div class="punto"><span>+</span></div>
+			  </div>
+			 </div>
+
+			</div>
+	
+			<div class="info-seccion">
+			
+			
+				<img src="imgs/circuitos/titulo-lois.png" />
+
+
+			</div>
+			
+			<div class="ayuda">ELEGÍ LA CATEGORÍA DE TU INTERÉS</div>
+		
+		 </div>
+		
+
+		<div class="foto-interactiva inactive">
+		
+		    <div class="titulo-foto-interactiva"><img src="imgs/circuitos/titulo-foto-interactiva.png" /></div>
+			<div class="achicar-pantalla"><img src="imgs/circuitos/achicar-pantalla.png" /></div>
+			
+		
+			<div class="temas">
+			  <div class="tema seis">
+				<div class="punto" data-open="contexto-historico"><span>+</span></div>
+			  </div>
+			  
+			  
+				<div class="foto-info close" id="contexto-historico">
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+					<div class="mas-info"><a href="#">+ INFO</a></div>
+				</div>
+			  
+			 </div>
+			 
+		
+		</div>	
+				
+
+	</div> 
+	{% endblock %}
+
+	{% block stylesheets %}
+	<style>
+		.active{
+			display: block;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+		}
+
+		.inactive{
+			display: none;
+		}
+
+		.hidden{
+			display: none;
+		}
+
+		.ayuda{
+			-webkit-animation-delay: 0s;
+			animation-delay: 0s;
+		}
+
+		.botonera {
+			position: absolute;
+			z-index: 999;
+			right: 30px;
+			top: 31px;
+		}
+
+		.botonera div {
+			float: right;
+			margin: 0 9px;
+			width: 80px;
+			cursor: pointer;
+			text-align: center;
+			font-size: 13px;
+		}
+
+		.botonera div img {
+			width: 80px;
+		}
+
+		.regiones {
+			position: absolute;
+			bottom: 70px;
+			left: 30px;
+		}
+
+		#circuitos .bg-circuitos {
+			background-image: url(imgs/circuitos/bg.jpg);
+			background-position: center;
+			background-repeat: repeat-x;
+			background-color: #F6F9FA;
+			background-size: cover;
+		}
+
+		#circuitos .bg-principal {
+			background-image: url(imgs/circuitos/bg-obelisco.jpg);
+			background-position: center;
+			background-repeat: repeat-x;
+			background-color: #F6F9FA;
+			background-size: 1900px;
+		}
+
+		#circuitos .bg-musica {
+			background-image: url(imgs/circuitos/bg-musica.png);
+			background-position: center;
+			background-repeat: repeat-x;
+			background-size: 1430px;
+		}
+
+
+		#circuitos .tema.uno {
+			top: 490px;
+			left: 68px;
+			color: #5CB759;
+		}
+
+		#circuitos .tema.uno .punto {
+			background-color: #5CB759;
+			opacity: 0;
+			animation: bounceIn 0.5s;
+			animation-fill-mode: forwards;
+
+		}
+
+		#circuitos .tema.dos {
+			top: 318px;
+			left: 143px;
+			color: #2861FF;
+		}
+
+		#circuitos .tema.dos .punto {
+			background-color: #2861FF;
+			opacity: 0;
+			animation: bounceIn 0.5s;
+			animation-fill-mode: forwards;
+		}
+
+		#circuitos .tema.tres {
+			top: 540px;
+			left: 580px;
+			color: #F8B723;
+		}
+
+		#circuitos .tema.tres .punto {
+			background-color: #F8B723;
+			opacity: 0;
+			animation: bounceIn 0.5s;
+			animation-fill-mode: forwards;
+		}
+
+		#circuitos .tema.cuatro {
+			top: 370px;
+			left: 816px;
+			color: #70CE6E;
+		}
+
+		#circuitos .tema.cuatro .punto {
+			background-color: #70CE6E;
+			opacity: 0;
+			animation: bounceIn 0.5s;
+			animation-fill-mode: forwards;
+		}
+
+		#circuitos .tema.cinco {
+			top: 440px;
+			left: 940px;
+			color: #9B26AF;
+		}
+
+		#circuitos .tema.cinco .punto {
+			background-color: #9B26AF;
+			opacity: 0;
+			animation: bounceIn 0.5s;
+			animation-fill-mode: forwards;
+		}
+
+		#circuitos .tema.seis {
+			top: 40px;
+			left: -173px;
+			color: #ED1C9B;
+		}
+
+		#circuitos .tema.seis .punto {
+			background-color: #ED1C9B;
+			opacity: 0;
+			animation: bounceIn 0.5s;
+			animation-fill-mode: forwards;
+			position: absolute;
+			bottom: -244px;
+			left: 88px;
+		}
+
+
+		/* INTERNA */
+
+		#circuitos .interna .tema.seis {
+			top: 230px;
+			left: 63px;
+			color: #ED1C9B;
+		}
+
+		#circuitos .interna .tema.dos {
+			top: 388px;
+			left: -25px;
+			color: #2861FF;
+		}
+
+		#circuitos .interna .tema.cuatro {
+			top: 380px;
+			left: 356px;
+			color: #70CE6E;
+		}
+
+		#circuitos .interna .tema.tres {
+			top: 400px;
+			left: 560px;
+			color: #F8B723;
+		}
+
+		#circuitos .interna .tema.cinco {
+			top: 330px;
+			left: 790px;
+			color: #9B26AF;
+		}
+
+
+		#circuitos .tema-title {
+			position: absolute;
+			color: #E70081;
+			font-size: 34px;
+			font-weight: 300;
+			background: rgba(230,230,230,0.6);
+			padding: 15px 60px 15px 30px;
+			border-radius: 16px;
+			top: 21%;
+			right: -100%;
+			animation: slideRightBorder 1s 0.2s ease;
+			animation-fill-mode: forwards;
+		}
+
+		#circuitos .tema-sub-title {
+			position: absolute;
+			color: #17B4FF;
+			font-size: 34px;
+			font-weight: bold;
+			background: rgba(230,230,230,0.6);
+			padding: 30px 60px 30px 30px;
+			border-radius: 16px;
+			top: 31%;
+			right: -100%;
+			animation: slideRightBorder 1s 0.2s ease;
+			animation-fill-mode: forwards;
+		}
+
+		/* contenido */
+
+
+		.info-seccion {
+			position: absolute;
+			top: 20%;
+			right: -100%;
+			width: 340px;
+			animation: slideRightBorder 1s 0.2s ease;
+			animation-fill-mode: forwards;
+		}
+
+		.info-seccion img {
+			width: 100%;
+		}
+
+
+
+
+		.imagen-principal img {
+			position: absolute;
+			height: 100vh;
+			z-index: 10;
+		}
+
+
+		.contenido .temas-container {
+			position: absolute;
+			width: 680px;
+			height: 620px;
+			left: 50%;
+			top: 60%;
+			margin-left: -310px;
+			margin-top: -370px;
+			background: url(imgs/circuitos/puntos-lois.png);
+			background-size: contain;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+
+		#circuitos .contenido .tema.tres {
+			top: 158px;
+			left: 493px;
+			color: #F8B723;
+		}
+
+		.contenido .ayuda {
+			margin-left: -60px;
+		}
+
+
+
+		/* FOTO INTERACTIVA */
+
+		.foto-interactiva {
+			background: url(imgs/circuitos/foto-interactiva.jpg);
+			background-position: center;
+			background-size: 1680px;
+			background-repeat: no-repeat;
+			background-color: black;
+		}
+
+		.foto-interactiva .temas {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			width: 600px;
+			height: 600px;
+			margin-left: -300px;
+			margin-top: -300px;
+		}
+
+		#circuitos .foto-interactiva .tema.seis {
+			top: -37px;
+			left: -83px;
+			color: #ED1C9B;
+		}
+
+		.foto-interactiva .foto-info {
+			width: 235px;
+			position: absolute;
+			background: rgba(255, 255, 255, 0.2);
+			color: white;
+			padding: 20px;
+			font-size: 14px;
+			border-radius: 7px;
+			left: -371px;
+			top: 168px;
+			overflow: hidden;
+			text-align: center;
+			z-index: 2;
+			height: 273px;
+			transition: all 0.5s ease;
+		}
+
+		.foto-interactiva .foto-info.close {
+			opacity: 0;
+			height: 0;
+		}
+
+		.foto-interactiva .foto-info .mas-info a {
+			color: #17b4ff;
+			font-weight: bold;
+		}
+
+		.achicar-pantalla {
+			position: absolute;
+			bottom: 10px;
+			right: 20px;
+			cursor: pointer;
+		}
+
+		.achicar-pantalla:hover {
+			transform: scale(0.96);
+		}
+
+		.titulo-foto-interactiva {
+			position: absolute;
+			bottom: 10px;
+			left: 20px;
+		}
+	</style>
+	{% endblock %}	
+	
+	{% block javascripts %}
+	<script>
+	
+			$(window).load(function() {
+			
+			  $(".seccion, .btn-seccion").on("click", function(e){
+			  $(".principal").removeClass("inactive").addClass("active")
+			  $(".interna").removeClass("active").addClass("inactive")
+			  $(".contenido").removeClass("active").addClass("inactive")
+			  $(".foto-interactiva").removeClass("active").addClass("inactive")
+			  $(".seccion").removeClass("small")
+			  $(".desplegable").removeClass("open")
+			  $(".botonera").addClass("hidden")
+			  $(".seccion").removeClass("hidden")
+			  
+			  $(".botonera div").css("color", "#000")
+			  
+			})
+
+			$(".temas .tema.seis li").on("click", function(e){
+			  $(".principal").removeClass("active").addClass("inactive")
+			  $(".interna").removeClass("inactive").addClass("active")
+			  $(".seccion").addClass("small")
+			})
+			
+			$(".interna .temas .tema.seis").on("click", function(e){
+			  $(".interna").removeClass("active").addClass("inactive")
+			  $(".contenido").removeClass("inactive").addClass("active")
+			  
+			  $(".seccion").addClass("hidden")
+			  $(".botonera").removeClass("hidden")
+			  
+			  
+			})
+			
+			$(".btn-musicales").on("click", function(e){
+			  $(".principal").removeClass("active").addClass("inactive")
+			  $(".interna").removeClass("inactive").addClass("active")
+			  $(".contenido").removeClass("active").addClass("inactive")
+			  $(".foto-interactiva").removeClass("active").addClass("inactive")
+			  $(".botonera").addClass("hidden")
+			  $(".seccion").removeClass("hidden")
+			  
+			  $(".botonera div").css("color", "#000")
+			})
+			
+			$(".btn-jazz, .achicar-pantalla").on("click", function(e){
+			  $(".principal").removeClass("active").addClass("inactive")
+			  $(".interna").removeClass("active").addClass("inactive")
+			  $(".contenido").removeClass("inactive").addClass("active")
+			  $(".foto-interactiva").removeClass("active").addClass("inactive")
+			  
+			  $(".botonera div").css("color", "#000")
+			})
+			
+			$(".contenido .temas .tema.tres").on("click", function(e){
+				
+			  $(".contenido").removeClass("active").addClass("inactive")
+			  $(".foto-interactiva").removeClass("inactive").addClass("active")
+			  
+			  $(".botonera div").css("color", "#fff")
+
+			})
+			
+			/* FOTO INTERACTIVA */
+
+			$(".foto-interactiva .punto").click(function(e){
+				var openThis = "#" + $(this).data("open")
+				$(".foto-interactiva").find(openThis).toggleClass("close")
+			});
+
+		});
+
+	</script>
+	{% endblock %}
