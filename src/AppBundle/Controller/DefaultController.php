@@ -51,6 +51,16 @@ class DefaultController extends Controller
         ]);
     }
     /**
+     * @Route("/paleontologia", name="dino")
+     */
+    public function dinoAction(Request $request)
+    {
+        // replace this example code with whatever you need
+        return $this->render('default/paleontologia.html.twig', [
+            'base_dir' => realpath($this->getParameter('kernel.root_dir').'/..').DIRECTORY_SEPARATOR,
+        ]);
+    }
+    /**
      * @Route("/circuitos", name="circuitos")
      */
     public function circuitosAction(Request $request)
@@ -68,6 +78,18 @@ class DefaultController extends Controller
     {
         // replace this example code with whatever you need
         return $this->render('default/biblioteca.html.twig', [
+            'base_dir' => realpath($this->getParameter('kernel.root_dir').'/..').DIRECTORY_SEPARATOR,
+        ]);
+    }
+    
+    
+    /**
+     * @Route("/paleontologia/dino", name="paleo01")
+     */
+    public function paleo01Action(Request $request)
+    {
+        // replace this example code with whatever you need
+        return $this->render('obras/dino.html.twig', [
             'base_dir' => realpath($this->getParameter('kernel.root_dir').'/..').DIRECTORY_SEPARATOR,
         ]);
     }

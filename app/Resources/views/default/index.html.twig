@@ -3,33 +3,46 @@
 {% block idbody %}home{% endblock %}
 {% block body %}
 
-    <div class="logo close"><img src="imgs/logo.png"></div>
+  <div class="logo close"><img src="imgs/logo.png"></div>
 
-    <div class="container-full bg-sky">
-      <div class="the-logo {{ expanded ? 'close' : '' }}"><img src="imgs/logo_grande.png"></div>
-      <div class="the-sphere {{ not expanded ? 'close' : '' }}">
+  <div class="container-full bg-sky">
+    <div class="the-logo {{ expanded ? 'close' : '' }}"><img src="imgs/logo_grande.png"></div>
+    <div class="the-sphere {{ not expanded ? 'close' : '' }}">
 
-        <div class="particles {{ not expanded ? 'close' : '' }}">
-          <div class="particle one {{ not expanded ? 'close' : '' }}"><div class="the-particle"><img src="imgs/icono-imagen.png"></div><div class="text">IMAGEN NACIONAL</div></div>
-          <div class="particle two {{ not expanded ? 'close' : '' }}"><a href="/editorial"><div class="the-particle"><img src="imgs/icono-editorial.png"></div><div class="text">EDITORIAL DIGITAL</div></a></div>
-          <div class="particle three {{ not expanded ? 'close' : '' }}"><a href="/biblioteca"><div class="the-particle"><img src="imgs/icono-biblioteca.png"></div><div class="text">BIBLIOTECA NACIONAL</div></a></div>
-          <div class="particle four {{ not expanded ? 'close' : '' }}"><a href="/museos"><div class="the-particle"><img src="imgs/icono-museos.png"></div><div class="text">MUSEOS</div></a></div>
-          <div class="particle five {{ not expanded ? 'close' : '' }}"><div class="the-particle"><img src="imgs/icono-3d.png"></div><div class="text">3D CULTURA</div></div>
-          <div class="particle six {{ not expanded ? 'close' : '' }}"><a href="/circuitos"><div class="the-particle"><img src="imgs/icono-circuitos.png"></div><div class="text">CIRCUITOS CULTURALES</div></a></div>
-          <div class="particle seven {{ not expanded ? 'close' : '' }}"><div class="the-particle"><img src="imgs/icono-aplicaciones.png"></div><div class="text">APLICACIONES</div></div>
+      <div class="particles {{ not expanded ? 'close' : '' }}">
+        <div class="particle one {{ not expanded ? 'close' : '' }}">
+          <div class="the-particle"><img src="imgs/icono-imagen.png"></div>
+          <div class="text">IMAGEN NACIONAL</div>
         </div>
+        <div class="particle two {{ not expanded ? 'close' : '' }}"><a href="/editorial"><div class="the-particle"><img src="imgs/icono-editorial.png"></div><div class="text">EDITORIAL DIGITAL</div></a></div>
+        <div class="particle three {{ not expanded ? 'close' : '' }}"><a href="/biblioteca"><div class="the-particle"><img src="imgs/icono-biblioteca.png"></div><div class="text">BIBLIOTECA NACIONAL</div></a></div>
+        <div class="particle four {{ not expanded ? 'close' : '' }}"><a href="/museos"><div class="the-particle"><img src="imgs/icono-museos.png"></div><div class="text">MUSEOS</div></a></div>
+        <div class="particle five {{ not expanded ? 'close' : '' }}">
+          <a href="/circuitos">
+            <div class="the-particle"><img src="imgs/icono-circuitos.png"></div>
+            <div class="text">CIRCUITOS<br> CULTURALES</div>
+          </a>
+        </div>
+        <div class="particle six {{ not expanded ? 'close' : '' }}">
+          <a href="/paleontologia">
+            <div class="the-particle"><img src="imgs/icono-3d.png"></div>
+            <div class="text">3D CULTURA</div>
+          </a>
+        </div>
+        <div class="particle seven {{ not expanded ? 'close' : '' }}"><div class="the-particle"><img src="imgs/icono-aplicaciones.png"></div><div class="text">APLICACIONES</div></div>
+      </div>
 
-      </div>
-      <div class="bg-edificios {{ not expanded ? 'close' : '' }}"></div>
-      <div class="aro {{ not expanded ? 'close' : '' }}">
-        <div class="the-aro"><img src="imgs/aro.png"></div>
-      </div>
     </div>
-  
+    <div class="bg-edificios {{ not expanded ? 'close' : '' }}"></div>
+    <div class="aro {{ not expanded ? 'close' : '' }}">
+      <div class="the-aro"><img src="imgs/aro.png"></div>
+    </div>
+  </div>
+
 {% endblock %}
 
 {% block stylesheets %}
-<style>
-   
-</style>
+  <style>
+
+  </style>
 {% endblock %}
