@@ -1,13 +1,13 @@
 {% extends 'base.html.twig' %}
 
-{% block idbody %}museos{% endblock %}
+{% block idbody %}tresdecultura{% endblock %}
 {% block body %}
 
   <div class="logo"><a href="/#inicio"><img src="imgs/logo.png"></a></div>
 
   <div class="seccion"><img src="imgs/3dCultura/boton-museos.png"></div>
 
-  <div class="container-full bg-museos">
+  <div class="container-full bg-3dcultura">
     <div class="background_image"></div>
 
     <div class="temas-container">
@@ -92,7 +92,7 @@
       </div>
 
       <div class="tema-epic auto-delay " >
-      <p>Lorem ipsum quietan vermit forrol, de mascretoiplan. Lorem ipsum quietan vermit forrol, de mascretoiplan</p></div>
+        <p>Lorem ipsum quietan vermit forrol, de mascretoiplan. Lorem ipsum quietan vermit forrol, de mascretoiplan</p></div>
 
 
       <div class="browse-floor inactive">
@@ -109,17 +109,17 @@
         <div class="tema sub-uno gotoPlanta auto-delay" >
           <div class=""><div class="planta-image"></div>
             <div class="planta-header">
-            <h3>planta <span>1</span></h3><p>PINTURAS</p></div>
+              <h3>planta <span>1</span></h3><p>PINTURAS</p></div>
           </div></div>
 
         <div class="tema sub-dos gotoPlanta auto-delay" ><div class=""><div class="planta-image"></div>
             <div class="planta-header">
-            <h3>planta <span>2</span></h3><p>ESCULTURAS</p></div>
+              <h3>planta <span>2</span></h3><p>ESCULTURAS</p></div>
           </div></div>
 
         <div class="tema sub-tres gotoPlanta auto-delay" ><div class=""><div class="planta-image"></div>
             <div class="planta-header">
-            <h3>planta <span>3</span></h3><p>EXHIBICIONES</p></div>
+              <h3>planta <span>3</span></h3><p>EXHIBICIONES</p></div>
           </div></div>
 
       </div>
@@ -141,16 +141,16 @@
 
 {% block stylesheets %}
   <style>
-a {
-  font-weight: bold;
-    color: #17B4FF;
-}
+    a {
+      font-weight: bold;
+      color: #17B4FF;
+    }
 
 
-.tema,.obra {
-  position: absolute;
-  cursor: pointer;
-}
+    .tema,.obra {
+      position: absolute;
+      cursor: pointer;
+    }
     .gotoPlanta h3 {
       font-size: 24px;
     }
@@ -274,80 +274,80 @@ a {
       display:block;
       background-image:url(content/3dCultura/planta-medium.png)
     }
-    
+
     .selected .planta-image{
       height:200%
     }
 
 
-  /* 3dCultura */
+    /* 3dCultura */
 
-  
-    #museos .tema-title {
-    position: absolute;
-    color: violet;
-    font-size: 34px;
-    font-weight: 300;
-    background: rgba(230,230,230,0.6);
-    padding: 15px 60px 15px 30px;
-    border-radius: 16px;
-    top: 21%;
-    right: -100%;
-    animation: slideRightBorder 1s 0.2s ease;
-    animation-fill-mode: forwards;
+
+    #tresdecultura .tema-title {
+      position: absolute;
+      color: violet;
+      font-size: 34px;
+      font-weight: 300;
+      background: rgba(230,230,230,0.6);
+      padding: 15px 60px 15px 30px;
+      border-radius: 16px;
+      top: 21%;
+      right: -100%;
+      animation: slideRightBorder 1s 0.2s ease;
+      animation-fill-mode: forwards;
     }
 
-    #museos .tema-sub-title {
-    position: absolute;
-    color: #17B4FF;
-    font-size: 34px;
-    font-weight: bold;
-    background: rgba(230,230,230,0.6);
-    padding: 30px 60px 30px 30px;
-    border-radius: 16px;
-    top: 31%;
-    right: -100%;
-    animation: slideRightBorder 1s 0.2s ease;
-    animation-fill-mode: forwards;
+    #tresdecultura .tema-sub-title {
+      position: absolute;
+      color: #17B4FF;
+      font-size: 34px;
+      font-weight: bold;
+      background: rgba(230,230,230,0.6);
+      padding: 30px 60px 30px 30px;
+      border-radius: 16px;
+      top: 31%;
+      right: -100%;
+      animation: slideRightBorder 1s 0.2s ease;
+      animation-fill-mode: forwards;
     }
 
-    #museos .tema-spot {
-    position: absolute;
-    top: 41%;
-    right: -100%;
-    animation: slideRightBorder 1s 0.2s ease;
-    animation-fill-mode: forwards;
+    #tresdecultura .tema-spot {
+      position: absolute;
+      top: 41%;
+      right: -100%;
+      animation: slideRightBorder 1s 0.2s ease;
+      animation-fill-mode: forwards;
 
-    text-align: center;
-    width: 300px;
+      text-align: center;
+      width: 300px;
 
     }
 
-    #museos .tema-epic {
+    #tresdecultura .tema-epic {
       width:250px;
-    position: absolute;
-    color: #444;
-    font-size: 18px;
-    font-weight: normal;
-    background: rgba(230,230,230,0.6);
-    padding: 8px 46px;
-    border-radius: 16px;
-    top: 64%;
-    right: -100%;
-    animation: slideRightBorder 1s 0.2s ease;
-    animation-fill-mode: forwards;
+      position: absolute;
+      color: #444;
+      font-size: 18px;
+      font-weight: normal;
+      background: rgba(230,230,230,0.6);
+      padding: 8px 46px;
+      border-radius: 16px;
+      top: 64%;
+      right: -100%;
+      animation: slideRightBorder 1s 0.2s ease;
+      animation-fill-mode: forwards;
     }
 
-    #museos .browse-floor {
+    #tresdecultura .browse-floor {
 
-    position: absolute;
-    top: 60%;
-    right: -100%;
-    animation: slideRightBorder 1s 0.2s ease;
-    animation-fill-mode: forwards;
+      position: absolute;
+      top: 60%;
+      right: -100%;
+      animation: slideRightBorder 1s 0.2s ease;
+      animation-fill-mode: forwards;
 
-    text-align: center;
-    width: 300px;
+      text-align: center;
+      width: 300px;
 
     }
 
@@ -357,7 +357,7 @@ a {
 
     }
 
-    #museos .browse-floor .planta-image{
+    #tresdecultura .browse-floor .planta-image{
       background-size:70px;
       height:79px;
       width:70px;
@@ -366,117 +366,117 @@ a {
 
 
 
-#museos .tema-spot.inactive {
-  opacity:0;
-  z-index: -999;
-}
+    #tresdecultura .tema-spot.inactive {
+      opacity:0;
+      z-index: -999;
+    }
 
-#museos .browser-right.inactive,
-.inactive {
-  display:none;
-  opacity:0;
-  z-index: -999;
-}
+    #tresdecultura .browser-right.inactive,
+    .inactive {
+      display:none;
+      opacity:0;
+      z-index: -999;
+    }
 
-#museos .tema-spot.active,
-.active {
-    opacity:1;
-  z-index: 9999;
-}
-
-
-#museos .inactive > div{
-    opacity: 0;
-    z-index:-1;
-}
-#museos .sub-sub-interna.inactive{
-    opacity: 0;
-    z-index:-1;
-}
-#museos .sub-interna > div.inactive{
-    opacity: 0;
-    z-index:-100;
-}
+    #tresdecultura .tema-spot.active,
+    .active {
+      opacity:1;
+      z-index: 9999;
+    }
 
 
-#museos .obra.uno {
-    top: 21%;
-    left: 46%;
-    color: #5CB759;
-}
-
-#museos .obra.uno .punto {
-    background-color: #5CB759;
-    opacity: 0;
-    animation: bounceIn 0.5s;
-    animation-fill-mode: forwards;
-}
-#museos .obra.dos {
-    top: 28%;
-    left: 58%;
-    color: #2861FF;
-}
-
-#museos .obra.dos .punto {
-    background-color: #2861FF;
-    opacity: 0;
-    animation: bounceIn 0.5s;
-    animation-fill-mode: forwards;
-}
-#museos .obra.tres {
-    top: 48%;
-    left: 48%;
-    color: #9B26AF;
-}
-
-#museos .obra.tres .punto {
-    background-color: #9B26AF;
-    opacity: 0;
-    animation: bounceIn 0.5s;
-    animation-fill-mode: forwards;
-}
-.tema-spot img.smaller{
-  width:200px
-}
-.tema-spot img{
-  width:290px
-}
-
-#left-screen-floor {
-width:23%;
-z-index:999999;
-    position: absolute;
-    left: 10%;
-    top: 30%;
-}
-#right-screen-floor {
-
-width:280px;
-z-index:999999;
-    position: absolute;
-    right: 28%;
-    top: 50%;
-}
-
-/*
-    position: absolute;
-    width: 600px;
-    height: 600px;
-    left: 50%;
-    top: 50%;
-    margin-left: -330px;
-    margin-top: -330px;
-}
+    #tresdecultura .inactive > div{
+      opacity: 0;
+      z-index:-1;
+    }
+    #tresdecultura .sub-sub-interna.inactive{
+      opacity: 0;
+      z-index:-1;
+    }
+    #tresdecultura .sub-interna > div.inactive{
+      opacity: 0;
+      z-index:-100;
+    }
 
 
-    .sub-sub-interna .planta-image{
-      height:330px;
-      width:300px;
-      background-size:300px;
-      margin: 21vh auto;
-      display:block;
-      background-image:url(content/museos/planta-medium.png)
-    }*/
+    #tresdecultura .obra.uno {
+      top: 21%;
+      left: 46%;
+      color: #5CB759;
+    }
+
+    #tresdecultura .obra.uno .punto {
+      background-color: #5CB759;
+      opacity: 0;
+      animation: bounceIn 0.5s;
+      animation-fill-mode: forwards;
+    }
+    #tresdecultura .obra.dos {
+      top: 28%;
+      left: 58%;
+      color: #2861FF;
+    }
+
+    #tresdecultura .obra.dos .punto {
+      background-color: #2861FF;
+      opacity: 0;
+      animation: bounceIn 0.5s;
+      animation-fill-mode: forwards;
+    }
+    #tresdecultura .obra.tres {
+      top: 48%;
+      left: 48%;
+      color: #9B26AF;
+    }
+
+    #tresdecultura .obra.tres .punto {
+      background-color: #9B26AF;
+      opacity: 0;
+      animation: bounceIn 0.5s;
+      animation-fill-mode: forwards;
+    }
+    .tema-spot img.smaller{
+      width:200px
+    }
+    .tema-spot img{
+      width:290px
+    }
+
+    #left-screen-floor {
+      width:23%;
+      z-index:999999;
+      position: absolute;
+      left: 10%;
+      top: 30%;
+    }
+    #right-screen-floor {
+
+      width:280px;
+      z-index:999999;
+      position: absolute;
+      right: 28%;
+      top: 50%;
+    }
+
+    /*
+        position: absolute;
+        width: 600px;
+        height: 600px;
+        left: 50%;
+        top: 50%;
+        margin-left: -330px;
+        margin-top: -330px;
+    }
+    
+    
+        .sub-sub-interna .planta-image{
+          height:330px;
+          width:300px;
+          background-size:300px;
+          margin: 21vh auto;
+          display:block;
+          background-image:url(content/museos/planta-medium.png)
+        }*/
 
   </style>
 {% endblock %}
@@ -486,7 +486,7 @@ z-index:999999;
   <!-- <script type="text/javascript" src="{{ asset('/js/script_museos.js') }}"></script> -->
 
   <script>
-    $("#museos .temas .tema:nth-child(4) .esfera, #museos .sub-seccion"
+    $("#tresdecultura .temas .tema:nth-child(4) .esfera, #museos .sub-seccion"
             ).on("click", function (e) {
       $(".principal").removeClass("active").addClass("inactive")
       $(".interna").removeClass("inactive").addClass("active")
@@ -497,7 +497,7 @@ z-index:999999;
 
     });
 
-    $("#museos .seccion").on("click", function (e) {
+    $("#tresdecultura .seccion").on("click", function (e) {
 
       $(".browser-right").removeClass("active").addClass("inactive")
       $(".bg-museos").removeClass("opaque")
@@ -520,7 +520,7 @@ z-index:999999;
       $(".ayuda").html("ELEGÍ LA TEMÁTICA DE TU INTERÉS")
     });
 
-    $("#museos .open-tema").on("click", function (e) {
+    $("#tresdecultura .open-tema").on("click", function (e) {
       e.preventDefault()
       var subsection = "#" + $(this).data("open")
       $(subsection).removeClass("inactive").addClass("active")
@@ -531,26 +531,26 @@ z-index:999999;
       $(".sub-interna .temas").removeClass("inactive").addClass("active")
       $(".ayuda").html("ELEGÍ UNA PLANTA")
 
-      $(".bg-museos").addClass("opaque")
+      $(".bg-3dcultura").addClass("opaque")
     });
 
 
-$("#bellas-artes .temas .tema:nth-child(1)"
-    ).on("click", function (e) {
+    $("#bellas-artes .temas .tema:nth-child(1)"
+            ).on("click", function (e) {
       /*e.preventDefault()
-      var planta = "#" + $(this).data("open")
-      $(planta).removeClass("inactive").addClass("active")
-
-browser-right
-    width: 210px;
-tema-epic
-left-screen-floor
-
-
-      $("#browser-right").removeClass("inactive").addClass("inactive")
-      */
-$('#left-screen-floor').toggle()
-$('#right-screen-floor').toggle()
+       var planta = "#" + $(this).data("open")
+       $(planta).removeClass("inactive").addClass("active")
+       
+       browser-right
+       width: 210px;
+       tema-epic
+       left-screen-floor
+       
+       
+       $("#browser-right").removeClass("inactive").addClass("inactive")
+       */
+      $('#left-screen-floor').toggle()
+      $('#right-screen-floor').toggle()
       $(".browse-floor").removeClass("inactive")
       $(".browse-floor").addClass("active")
       $(".tema-epic").addClass("inactive")
