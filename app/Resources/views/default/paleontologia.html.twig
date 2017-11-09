@@ -34,13 +34,13 @@
         </div>
         <div class="tema seis">
           <div class="desplegable close">
-            <div class="titulo">NACIONALES</div>
+            <div class="titulo">DINOSAURIOS</div>
             <ul>
-              <li>DEL GRABADO</li>
-              <li>ARTE ORIENTAL</li>
-              <li>ARTE DECORATIVO</li>
+              <li>ERAS</li>
+              <li>ESPECIES</li>
+              <li>FOSILES</li>
               <li><a href="#" class="open-tema" data-open="bellas-artes"
-                     >BELLAS ARTES</a></li>
+                     >MUSEO PATAGONICO</a></li>
             </ul>
           </div>
           <div class="punto auto-delay"><span>+</span></div>
@@ -66,10 +66,10 @@
     </div>
 
     <div id="left-screen-floor" style="display:none">
-      <a href="/obras/la-mano-de-dios"><img src="/imgs/3dCultura/lamano.png" width="40%" style="margin: 0 28% 20px"></a>
+      <a href="/paleontologia/dino"><img src="/imgs/3dCultura/lamano.png" width="70%" style="margin: 0 10% 20px"></a>
       <div class="panel">
-        <h3 style="margin-bottom:0;color:#ED1C9B">LA MANO DE DIOS</h3>
-        <h4 style="margin-top:0;color:#17B4FF">RODIN, RENÉ</h4>
+        <h3 style="margin-bottom:0;color:#ED1C9B">DINOSAURIO</h3>
+        <h4 style="margin-top:0;color:#17B4FF">Era Jurásica</h4>
       </div>
       <div class="panel">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed facilisis velit velit. Sed venenatis leo id est vehicula, nec vehicula leo porttitor. Nunc sed varius dui, eleifend posuere velit. Donec malesuada, lectus id tincidunt hendrerit, lacus urna pellentesque justo, sit amet ullamcorper ipsum lectus et est. Praesent mattis imperdiet maximus.</p>
@@ -77,16 +77,16 @@
       </div>
     </div>
     <div id="right-screen-floor" style="display:none"> 
-      <a href="/obras/la-vuelta-del-malon"><img src="/imgs/3dCultura/cuadro.png" width="60%" style="margin: 0 0 20px 60px;"></a>
+      <img src="/imgs/3dCultura/cuadro.png" width="60%" style="margin: 0 0 20px 60px;">
       <div class="panel">
-        <h3 style="margin-bottom:0;color:#ED1C9B">LA VUELTA DEL MALÓN</h3>
-        <h4 style="margin-top:0;color:#17B4FF">DELLA VALLE, ÁNGEL</h4>
+        <h3 style="margin-bottom:0;color:#ED1C9B">Valle del Chocón</h3>
+        <h4 style="margin-top:0;color:#17B4FF">NEUQUEN</h4>
       </div>
     </div>
 
     <div class="browser-right inactive">
-      <div class="tema-title auto-delay ">NACIONALES</div>
-      <div class="tema-sub-title auto-delay ">BELLAS ARTES</div>
+      <div class="tema-title auto-delay ">DINOSAURIOS</div>
+      <div class="tema-sub-title auto-delay ">MPCN</div>
       <div class="tema-spot auto-delay " >
         <img src="/imgs/3dCultura/bellas-artes-spot.png">
       </div>
@@ -109,12 +109,12 @@
         <div class="tema sub-uno gotoPlanta auto-delay" >
           <div class=""><div class="planta-image"></div>
             <div class="planta-header">
-              <h3>planta <span>1</span></h3><p>PINTURAS</p></div>
+              <h3>planta <span>1</span></h3><p>FOSILES</p></div>
           </div></div>
 
         <div class="tema sub-dos gotoPlanta auto-delay" ><div class=""><div class="planta-image"></div>
             <div class="planta-header">
-              <h3>planta <span>2</span></h3><p>ESCULTURAS</p></div>
+              <h3>planta <span>2</span></h3><p>HABITAT</p></div>
           </div></div>
 
         <div class="tema sub-tres gotoPlanta auto-delay" ><div class=""><div class="planta-image"></div>
@@ -159,7 +159,7 @@
       background-image: none !important;
     }
 
-    .bg-museos .background_image {
+    .bg-3dcultura .background_image {
       position: absolute;
       z-index: 0;
       top: 0;
@@ -500,7 +500,7 @@
     $("#tresdecultura .seccion").on("click", function (e) {
 
       $(".browser-right").removeClass("active").addClass("inactive")
-      $(".bg-museos").removeClass("opaque")
+      $(".bg-3dcultura").removeClass("opaque")
       $(".desplegable.open").removeClass("open")
       $(".principal").removeClass("inactive").addClass("active")
       $(".interna").removeClass("active").addClass("inactive")
