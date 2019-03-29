@@ -1501,6 +1501,97 @@ a{
 }
 
 
+/* TRANSPORTE */
+
+#transporte .bg-transporte {
+  background-image: url(imgs/transporte/bg-transporte.jpg);
+  background-position: center;
+  background-repeat: repeat-x;
+  background-color: #F6F9FA;
+  background-size: 1600px;
+}
+
+#transporte .tema.uno {
+  top: 400px;
+  left: 28px;
+  color: #5CB759;
+}
+
+#transporte .tema.uno .punto {
+  background-color: #5CB759;
+  opacity: 0;
+  animation: bounceIn 0.5s;
+  animation-fill-mode: forwards;
+
+}
+
+#transporte .tema.dos {
+  top: 318px;
+  left: 143px;
+  color: #2861FF;
+}
+
+#transporte .tema.dos .punto {
+  background-color: #2861FF;
+  opacity: 0;
+  animation: bounceIn 0.5s;
+  animation-fill-mode: forwards;
+}
+
+#transporte .tema.tres {
+  top: 410px;
+  left: 240px;
+  color: #F8B723;
+}
+
+#transporte .tema.tres .punto {
+  background-color: #F8B723;
+  opacity: 0;
+  animation: bounceIn 0.5s;
+  animation-fill-mode: forwards;
+}
+
+#transporte .tema.cuatro {
+  top: 310px;
+  left: 366px;
+  color: #70CE6E;
+}
+
+#transporte .tema.cuatro .punto {
+  background-color: #70CE6E;
+  opacity: 0;
+  animation: bounceIn 0.5s;
+  animation-fill-mode: forwards;
+}
+
+#transporte .tema.cinco {
+  top: 400px;
+  left: 480px;
+  color: #9B26AF;
+}
+
+#transporte .tema.cinco .punto {
+  background-color: #9B26AF;
+  opacity: 0;
+  animation: bounceIn 0.5s;
+  animation-fill-mode: forwards;
+}
+
+
+#transporte .tema.seis {
+  top: 290px;
+  left: 577px;
+  color: #ED1C9B;
+}
+
+#transporte .tema.seis .punto {
+  background-color: #ED1C9B;
+  opacity: 0;
+  animation: bounceIn 0.5s;
+  animation-fill-mode: forwards;
+}
+
+
 /* MUSEOS */
 
 #museos .bg-museos {

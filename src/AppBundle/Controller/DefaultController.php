@@ -41,6 +41,16 @@ class DefaultController extends Controller
         ]);
     }
     /**
+     * @Route("/transporte", name="transporte")
+     */
+    public function transporteAction(Request $request)
+    {
+        // replace this example code with whatever you need
+        return $this->render('default/transporte.html.twig', [
+            'base_dir' => realpath($this->getParameter('kernel.root_dir').'/..').DIRECTORY_SEPARATOR,
+        ]);
+    }
+    /**
      * @Route("/museos", name="museos")
      */
     public function museosAction(Request $request)
