@@ -59,7 +59,7 @@
         </div>
       </div>
     </div>
-
+{# 
     <div id="left-screen-floor" style="display:none">
       <a href="/obras/la-mano-de-dios"><img src="/imgs/museos/lamano.png" width="40%" style="margin: 0 28% 20px"></a>
       <div class="panel">
@@ -70,12 +70,12 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed facilisis velit velit. Sed venenatis leo id est vehicula, nec vehicula leo porttitor. Nunc sed varius dui, eleifend posuere velit. Donec malesuada, lectus id tincidunt hendrerit, lacus urna pellentesque justo, sit amet ullamcorper ipsum lectus et est. Praesent mattis imperdiet maximus.</p>
         <a>+ INFO</a>
       </div>
-    </div>
+    </div> #}
     <div id="right-screen-floor" style="display:none"> 
-      <a href="/obras/la-vuelta-del-malon"><img src="/imgs/museos/cuadro.png" width="60%" style="margin: 0 0 20px 60px;"></a>
+      <a href=""><img src="/imgs/transporte/cuadro.png" width="60%" style="margin: 0 0 20px 60px;"></a>
       <div class="panel">
-        <h3 style="margin-bottom:0;color:#ED1C9B">LA VUELTA DEL MALÓN</h3>
-        <h4 style="margin-top:0;color:#17B4FF">DELLA VALLE, ÁNGEL</h4>
+        <h3 style="margin-bottom:0;color:#cdaf11">Recorrido</h3>
+        <h4 style="margin-top:0;color:#17B4FF">16 Kilómetros</h4>
       </div>
     </div>
 
@@ -223,8 +223,8 @@ a {
     .planta-header p {
       text-align: center;
       font-size: 20px;
-      color:violet;
-      font-weight: 300;
+      color:#cdaf11;
+      font-weight: 900;
     }
     .planta-header {
       top: 20%;
@@ -267,7 +267,7 @@ a {
       background-size:300px;
       margin: 21vh auto;
       display:block;
-      background-image:url(content/museos/planta-medium.png)
+      background-image:url(content/transporte/planta-medium.png)
     }
     
     .selected .planta-image{
@@ -280,9 +280,9 @@ a {
   
     #transporte .tema-title {
     position: absolute;
-    color: violet;
+    color: #cdaf11;
     font-size: 34px;
-    font-weight: 300;
+    font-weight: 900;
     background: rgba(230,230,230,0.6);
     padding: 15px 60px 15px 30px;
     border-radius: 16px;
@@ -470,7 +470,7 @@ z-index:999999;
       background-size:300px;
       margin: 21vh auto;
       display:block;
-      background-image:url(content/museos/planta-medium.png)
+      background-image:url(content/transporte/planta-medium.png)
     }*/
 
   </style>
@@ -478,7 +478,6 @@ z-index:999999;
 
 
 {% block javascripts %}
-  <!-- <script type="text/javascript" src="{{ asset('/js/script_museos.js') }}"></script> -->
 
   <script>
     $("#transporte .temas .tema:nth-child(4) .esfera, #transporte .sub-seccion"
@@ -517,6 +516,7 @@ z-index:999999;
 
     $("#transporte .open-tema").on("click", function (e) {
       e.preventDefault()
+      
       var subsection = "#" + $(this).data("open")
       $(subsection).removeClass("inactive").addClass("active")
 
@@ -527,6 +527,7 @@ z-index:999999;
       $(".ayuda").html("ELEGÍ UNA ESTACIÓN")
 
       $(".bg-museos").addClass("opaque")
+      
     });
 
 
